@@ -26,8 +26,8 @@ if (cmd === `!info`){
     },
     title: "Informações sobre BOT \n",
     fields: [{
-        name: "Desenvolvedor:                                   Versão:",
-        value: "Will Ajudante-MP                    1.0.0"
+        name: "Desenvolvedor:                                                       Versão:",
+        value: "Will Ajudante-MP                                        1.0.0"
       },
     ],
   }})
