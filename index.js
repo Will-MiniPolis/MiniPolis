@@ -26,24 +26,20 @@ if (cmd === `!comandos`){
     },
     title: "Comandos do BOT: \n",
     fields: [{
-        name: "!Info",
-        value: "Informações sobre o BOT. \n"
+        name: ":black_circle:  !Info  :black_circle:",
+        value: "Obtenha informações sobre o BOT."
       },
       {
-        name: " ",
-        value: " "
+        name: ":white_circle:  !Jogar  :white_circle:",
+        value: "Utilize este comando para saber como jogar MiniPólis."
       },
       {
-        name: "!Jogar",
-        value: "Utilize este comando para jogar MiniPólis. \n"
-      },
+        name: ":red_circle:  EM BREVE   :red_circle:",
+        value: "Este comando não está disponível no momento."
+      }
       {
-        name: " ",
-        value: " "
-      },
-      {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
+        name: ":large_blue_circle:  EM BREVE   :large_blue_circle:",
+        value: "Este comando não está disponível no momento."
       }
     ],
   }})
