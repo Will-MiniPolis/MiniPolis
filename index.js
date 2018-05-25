@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
-  console.log(`-----||-----||----- \nBOT ATIVADO COM SUCESSO! \n-----||-----||-----`);
+  console.log(`-----||-----||-----||----- \nBOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
   bot.user.setActivity(`!COMANDOS`);
 });
 
