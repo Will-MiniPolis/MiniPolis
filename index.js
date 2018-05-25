@@ -24,7 +24,7 @@ if (cmd === `!info`){
       name: bot.user.username,
       icon_url: bot.user.avatarURL
     },
-    title: "Informações sobre o BOT",
+    title: "Informações sobre o BOT:",
     url: "https://www.facebook.com/Will.MiniPolis",
     fields: [{
         name: "Desenvolvedor:                                                                           Versão:",
