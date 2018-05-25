@@ -16,7 +16,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
   if (cmd === `!comandos`){
-    message.channel.send("```# Comandos:\n- !jogar (Utilize este comando para jogar MiniPólis)\n- Comando 2\n- Comando 3```");
+    message.channel.send("```yaml\n# Comandos: \n\n- !jogar (Utilize este comando para jogar MiniPólis) \n- Comando 2 \n- Comando 3 \n```");
   }
 
   if (cmd === `!jogar`){
