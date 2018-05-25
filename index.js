@@ -31,8 +31,8 @@ if (cmd === `!info`){
         value: "Will Ajudante-MP                                             1.0.0"
       },
       {
-        name: "Atualização:",
-        value: "25/05/2018"
+        name: "Atualização:                                                                             Nome do BOT:",
+        value: "25/05/2018                                                                              Moderador"
       },
     ],
   }})
