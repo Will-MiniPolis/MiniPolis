@@ -57,6 +57,16 @@ if (cmd === `!equipe`){
   }
 
 
+if (cmd === `!moderadores`){
+   message.channel.send("```md\n# Moderadores do MiniPólis: \n\n• Nenhum integrante no momento. \n```");
+  }
+
+
+if (cmd === `!administradores`){
+   message.channel.send("```md\n# Administradores do MiniPólis: \n\n• Rky Smart \n• Tiago Admin-MP \n```");
+  }
+
+
 });
 
 bot.login(process.env.TOKEN);
