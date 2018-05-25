@@ -26,20 +26,8 @@ if (cmd === `!info`){
     },
     title: "Informações do BOT: \n",
     fields: [{
-        name: "Desenvolvedor:          Versão:",
-        value: "Will Ajudante-MP        1.0.0"
-      },
-      {
-        name: "  !Jogar  ",
-        value: "Utilize este comando para saber como jogar MiniPólis."
-      },
-      {
-        name: "  EM BREVE   ",
-        value: "Este comando não está disponível no momento."
-      },
-      {
-        name: "  EM BREVE   ",
-        value: "Este comando não está disponível no momento."
+        name: "Desenvolvedor:                                           Versão:",
+        value: "Will Ajudante-MP                                    1.0.0"
       },
     ],
   }})
