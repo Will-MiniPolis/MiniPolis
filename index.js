@@ -20,11 +20,11 @@ bot.on("message", async message => {
   }
 
   if (cmd === `!jogar`){
-    message.channel.send("```md\n# Jogar MiniPólis: \n\nPara testar a versão ALPHA do MiniPólis basta acessar nosso site: \n• https://ALPHA.MiniPolis.com.br/ \n```");
+    message.channel.send("```md\n# Jogar MiniPólis: \n\nPara testar a versão ALPHA do MiniPólis basta acessar nosso site: \n• ALPHA.MiniPolis.com.br \n```");
   }
 
   if (cmd === `!info`){
-    message.channel.send("```md\n# BOT - MiniPólis: \n\n• Desenvolvedor: Will Ajudante-MP \n• Versão: 1.0.0 \n• Atualização: 25/05/2018 \n• Nome do BOT: @Moderador \n• Idioma: Português (Brasil) \n```");
+    message.channel.send("```md\n# BOT - MiniPólis: \n\n• Desenvolvedor: Will Ajudante-MP \n• Versão: 1.0.0 \n• Atualização: 25/05/2018 \n• Nome do BOT: @Moderador \n• Idioma: Português (Brasil) \n• Proprietário: MiniPolis.com.br \n```");
   }
 });
 
