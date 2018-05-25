@@ -20,7 +20,7 @@ bot.on("message", async message => {
   }
 
   if (cmd === `!jogar`){
-    message.channel.send("```md\n# Jogar MiniPólis: \nPara testar a versão ALPHA do MiniPólis basta acessar nosso site: \n• https://ALPHA.MiniPolis.com.br/* \n```");
+    message.channel.send("```md\n# Jogar MiniPólis: \n\nPara testar a versão ALPHA do MiniPólis basta acessar nosso site: \n• https://ALPHA.MiniPolis.com.br/* \n```");
   }
 });
 
