@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
-  bot.user.setActivity(`MiniPólis  -  !Comandos`);
+  bot.user.setActivity(`MiniPólis  -  !Comandos`);
 });
 
 bot.on("message", async message => {
@@ -51,11 +51,7 @@ if (cmd === `!teste`){
         value: "You can put all the *usual* **__Markdown__** inside of them."
       }
     ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© Example"
-  }}}
+	}}
 	)}
 	  
 });
