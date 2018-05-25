@@ -1,7 +1,7 @@
 {
-  "name": "Moderador",
+  "name": "Moderaror",
   "version": "1.0.0",
-  "description": "",
+  "description": "MiniPólis",
   "main": "index.js",
   "author": "Will Ajudante-MP",
   "dependencies": {
