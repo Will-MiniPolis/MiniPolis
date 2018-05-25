@@ -34,6 +34,10 @@ if (cmd === `!info`){
         name: "Atualização:                                                                             Nome do BOT:",
         value: "25/05/2018                                                   Moderador"
       },
+      {
+        name: "Linguaguem:                                                                              Proprietário:",
+        value: "Português (Brasil)                                           [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
+      },
     ],
   }})
 }
