@@ -36,11 +36,11 @@ if (cmd === `!comandos`){
       {
         name: ":red_circle:  EM BREVE   :red_circle:",
         value: "Este comando não está disponível no momento."
-      }
+      },
       {
         name: ":large_blue_circle:  EM BREVE   :large_blue_circle:",
         value: "Este comando não está disponível no momento."
-      }
+      },
     ],
   }})
 }
