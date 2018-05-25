@@ -32,7 +32,7 @@ if (cmd === `!info`){
       },
       {
         name: "Atualização:                                                                                                                 Nome do BOT:",
-        value: "25/05/2018                                                                                  Moderador"
+        value: "25/05/2018                                                                             Moderador"
       },
       {
         name: "Idioma:                                                                     Proprietário:",
