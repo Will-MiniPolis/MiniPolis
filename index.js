@@ -44,7 +44,7 @@ if (cmd === `!teste`){
       text: "© Example"
 	}
   }
-})
+ }})
   
 });
 
