@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "author": "Will Ajudante-MP",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2"
   }
