@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
-  bot.user.setActivity(`!comandos`);
+  bot.user.setActivity(`Utilize: !comandos`);
 });
 
 bot.on("message", async message => {
