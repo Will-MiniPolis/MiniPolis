@@ -30,8 +30,14 @@ if (cmd === `!comandos`){
         value: "Informações sobre o BOT. \n"
       },
       {
+        name: " ",
+      },
+      {
         name: "!Jogar",
         value: "Utilize este comando para jogar MiniPólis. \n"
+      },
+      {
+        name: " ",
       },
       {
         name: "Markdown",
