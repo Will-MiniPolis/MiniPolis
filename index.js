@@ -27,8 +27,8 @@ if (cmd === `!info`){
     title: "Informações sobre o BOT:",
     url: "https://www.facebook.com/Will.MiniPolis",
     fields: [{
-        name: "Desenvolvedor: \u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022 Versão:",
-        value: "Will Ajudante-MP \u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022\u0022 1.0.0"
+        name: "Desenvolvedor: \v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v Versão:",
+        value: "Will Ajudante-MP \v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v 1.0.0"
       },
       {
         name: "Atualização:                                                                Nome do BOT:",
