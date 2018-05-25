@@ -67,6 +67,11 @@ if (cmd === `!administradores`){
   }
 
 
+if (cmd === `!comandos`){
+   message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
+  }
+
+
 });
 
 bot.login(process.env.TOKEN);
