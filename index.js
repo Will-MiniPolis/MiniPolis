@@ -30,6 +30,10 @@ if (cmd === `!comandos`){
         value: "Obtenha informações sobre o BOT."
       },
       {
+        name: " \n",
+        value: " \n"
+      },
+      {
         name: ":white_circle:  !Jogar  :white_circle:",
         value: "Utilize este comando para saber como jogar MiniPólis."
       },
