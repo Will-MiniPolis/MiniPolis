@@ -58,6 +58,6 @@ if (cmd === `!teste`){
   }}}
 	)}
 	  
-};
+});
 
 bot.login(process.env.TOKEN);
