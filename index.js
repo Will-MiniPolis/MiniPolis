@@ -36,7 +36,7 @@ if (cmd === `!info`){
       },
       {
         name: "Idioma:                                                                                                                                      Proprietário:",
-        value: "Português (Brasil)                                                            [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
+        value: "Português (Brasil)                                                           [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
     footer: {
