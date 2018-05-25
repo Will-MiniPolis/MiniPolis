@@ -16,7 +16,11 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
   if (cmd === `!comandos`){
-    message.channel.send("```html\n# Comandos:\n- Comando 1\n- Comando 2\n- Comando 3\n```");
+    message.channel.send("```# Comandos:\n- !jogar (Utilize este comando para jogar MiniPólis)\n- Comando 2\n- Comando 3```");
+  }
+
+  if (cmd === `!jogar`){
+    message.channel.send("```Para testar a versão ALPHA do MiniPólis basta acessar nosso site: \n--> https://ALPHA.MiniPolis.com.br <--```");
   }
 });
 
