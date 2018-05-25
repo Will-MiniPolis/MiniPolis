@@ -24,10 +24,10 @@ if (cmd === `!info`){
       name: bot.user.username,
       icon_url: bot.user.avatarURL
     },
-    title: "Informações sobre BOT \n",
-    url: "",
+    title: "Informações sobre BOT",
+    url: " ",
     fields: [{
-        name: "Desenvolvedor:                                                                 Versão:",
+        name: "Desenvolvedor:                                                               Versão:",
         value: "Will Ajudante-MP                                             1.0.0"
       },
       {
