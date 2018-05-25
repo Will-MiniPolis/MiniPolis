@@ -35,7 +35,7 @@ if (cmd === `!info`){
         value: "25/05/2018                                                   Moderador"
       },
       {
-        name: "Idioma:                                                                                                  Proprietário:",
+        name: "Idioma:                                                                                                   Proprietário:",
         value: "Português (Brasil)                         [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
