@@ -26,23 +26,19 @@ if (cmd === `!comandos`){
     },
     title: "Comandos do BOT: \n",
     fields: [{
-        name: ":black_circle:  !Info  :black_circle:",
+        name: "  !Info  ",
         value: "Obtenha informações sobre o BOT."
       },
       {
-        name: " \n",
-        value: " \n"
-      },
-      {
-        name: ":white_circle:  !Jogar  :white_circle:",
+        name: "  !Jogar  ",
         value: "Utilize este comando para saber como jogar MiniPólis."
       },
       {
-        name: ":red_circle:  EM BREVE   :red_circle:",
+        name: "  EM BREVE   ",
         value: "Este comando não está disponível no momento."
       },
       {
-        name: ":large_blue_circle:  EM BREVE   :large_blue_circle:",
+        name: "  EM BREVE   ",
         value: "Este comando não está disponível no momento."
       },
     ],
