@@ -25,6 +25,7 @@ if (cmd === `!info`){
       icon_url: bot.user.avatarURL
     },
     title: "Informações sobre BOT \n",
+    url: "",
     fields: [{
         name: "Desenvolvedor:                                                                 Versão:",
         value: "Will Ajudante-MP                                        1.0.0"
