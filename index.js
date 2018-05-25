@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
-  bot.user.setActivity(`MiniPólis  -  !Comandos`);
+  bot.user.setActivity(`MiniPólis  -  !Comandos`);
 });
 
 bot.on("message", async message => {
@@ -35,13 +35,13 @@ if (cmd === `!info`){
         value: "25/05/2018                                                                        Moderador"
       },
       {
-        name: "Idioma:                                                                                                             Proprietário:",
+        name: "Idioma:                                                                                                                                        Proprietário:",
         value: "Português (Brasil)                                                             [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "© MiniPólis - Todos os direitos reservados | 2018
+      text: "© MiniPólis - Todos os direitos reservados | 2018"
     }
   }})
 }
