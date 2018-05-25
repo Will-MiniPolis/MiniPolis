@@ -39,6 +39,10 @@ if (cmd === `!info`){
         value: "Português (Brasil)                                                         [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© MiniPólis - Todos os direitos reservados."
+    }
   }})
 }
 
