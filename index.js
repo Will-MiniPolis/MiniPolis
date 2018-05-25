@@ -24,10 +24,10 @@ if (cmd === `!info`){
       name: bot.user.username,
       icon_url: bot.user.avatarURL
     },
-    title: "Informações sobre BOT",
-    url: " ",
+    title: "Informações sobre o BOT",
+    url: "https://www.facebook.com/Will.MiniPolis",
     fields: [{
-        name: "Desenvolvedor:                                                               Versão:",
+        name: "Desenvolvedor:                                                                           Versão:",
         value: "Will Ajudante-MP                                             1.0.0"
       },
       {
