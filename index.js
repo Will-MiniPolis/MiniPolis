@@ -24,7 +24,7 @@ bot.on("message", async message => {
   }
 
   if (cmd === `!info`){
-    message.channel.send("```md\n# BOT - MiniPólis: \n\n• Desenvolvedor: Will Ajudante-MP \n• Versão: 1.0.0 \n• Atualização: 25/05/2018 \n• Nome do BOT: @Moderador \n• Idioma: Português (Brasil) \n• Proprietário: MiniPolis.com.br \n```");
+    message.channel.send("```md\n# BOT - MiniPólis: \n\n• Desenvolvedor: Will Ajudante-MP \n• Versão: 1.0.0 \n• Atualização: 25/05/2018 \n• Nome do BOT: Moderador \n• Idioma: Português (Brasil) \n• Proprietário: MiniPolis.com.br \n```");
   }
 });
 
