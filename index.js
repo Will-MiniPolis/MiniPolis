@@ -47,6 +47,11 @@ if (cmd === `!info`){
 }
 
 
+if (cmd === `!ajudantes`){
+   message.channel.send("```md \n# Ajudantes do MiniPólis: \n• Ale Ajudante-MP \n• Gelff Ajudante-MP \n• Will Ajudante-MP \n• William Ajudante-MP \n```");
+  }
+
+
 });
 
 bot.login(process.env.TOKEN);
