@@ -27,16 +27,16 @@ if (cmd === `!info`){
     title: "Informações sobre o BOT:",
     url: "https://www.facebook.com/Will.MiniPolis",
     fields: [{
-        name: "Desenvolvedor:                                                                                           Versão:",
+        name: "Desenvolvedor:                                                              Versão:",
         value: "Will Ajudante-MP                                                           1.0.0"
       },
       {
-        name: "Atualização:                                                                                           Nome do BOT:",
-        value: "25/05/2018                                                               Moderador"
+        name: "Atualização:                                                                Nome do BOT:",
+        value: "25/05/2018                                                                 Moderador"
       },
       {
-        name: "Idioma:                                                                                                                Proprietário:",
-        value: "Português (Brasil)                                   [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
+        name: "Idioma:                                                                     Proprietário:",
+        value: "Português (Brasil)                                                         [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
   }})
