@@ -48,12 +48,12 @@ if (cmd === `!info`){
 
 
 if (cmd === `!ajudantes`){
-   message.channel.send("```md \n# Ajudantes do MiniPólis: \n• Ale Ajudante-MP \n• Gelff Ajudante-MP \n• Will Ajudante-MP \n• William Ajudante-MP \n```");
+   message.channel.send("```md\n# Ajudantes do MiniPólis: \n• Ale Ajudante-MP \n• Gelff Ajudante-MP \n• Will Ajudante-MP \n• William Ajudante-MP \n```");
   }
 
 
 if (cmd === `!equipe`){
-   message.channel.send("```md \n# Equipe do MiniPólis: \n• Andre Equipe-MP \n• Victor Equipe-MP \n```");
+   message.channel.send("```md\n# Equipe do MiniPólis: \n• Andre Equipe-MP \n• Victor Equipe-MP \n```");
   }
 
 
