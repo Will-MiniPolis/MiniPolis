@@ -17,17 +17,17 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   
 
-if (cmd === `!comandos`){
+if (cmd === `!info`){
   message.channel.send({embed: {
     color: 3447003,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
     },
-    title: "Comandos do BOT: \n",
+    title: "Informações do BOT: \n",
     fields: [{
-        name: "  !Info  ",
-        value: "Obtenha informações sobre o BOT."
+        name: "Desenvolvedor:          Versão:",
+        value: "Will Ajudante-MP"       1.0.0"
       },
       {
         name: "  !Jogar  ",
