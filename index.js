@@ -14,7 +14,20 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+
+  if (cmd === `!comandos`){
+    message.channel.send("```md\n# Comandos do BOT: \n\n• !jogar (Utilize este comando para jogar MiniPólis) \n• !info (Informações sobre o BOT) \n• Comando 3 (Em breve) \n```");
+  }
+
+  if (cmd === `!jogar`){
+    message.channel.send(":video_game: Jogar MiniPólis :video_game: \n\nPara testar a versão ALPHA do MiniPólis basta acessar nosso site: \n:heart:    https://ALPHA.MiniPolis.com.br/   :heart:");
+  }
+
+  if (cmd === `!info`){
+    message.channel.send("```md\n# BOT - MiniPólis: \n\n• Desenvolvedor: Will Ajudante-MP \n• Versão: 1.0.0 \n• Atualização: 25/05/2018 \n• Nome do BOT: Moderador \n• Idioma: Português (Brasil) \n• Proprietário: MiniPolis.com.br \n```");
+  }
   
+
 if (cmd === `!teste`){
   message.channel.send({embed: {
     color: 3447003,
@@ -42,10 +55,9 @@ if (cmd === `!teste`){
     footer: {
       icon_url: client.user.avatarURL,
       text: "© Example"
-	}
-  }
- })}
-  
-});
+  }}}
+	)}
+	  
+};
 
 bot.login(process.env.TOKEN);
