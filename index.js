@@ -31,6 +31,7 @@ if (cmd === `!comandos`){
       },
       {
         name: " ",
+        value: " "
       },
       {
         name: "!Jogar",
@@ -38,6 +39,7 @@ if (cmd === `!comandos`){
       },
       {
         name: " ",
+        value: " "
       },
       {
         name: "Markdown",
