@@ -111,7 +111,7 @@ bot.on("message", async message => {
     
     let msg = message.content.toUpperCase();
     let cont = message.content.slice(prefix.length).split(" ");
-    let args = cont.slice(1);
+    let args2 = cont.slice(1);
     
     if (msg.startsWith('/apagar')) { 
         async function purge() {
@@ -120,11 +120,11 @@ bot.on("message", async message => {
                 message.channel.send('You need the \`bot-commander\` role to use this command.');
                 return;
             }
-            if (isNaN(args[0])) {
+            if (isNaN(args2[0])) {
                 message.channel.send('Please use a number as your arguments. \n Usage: ' + prefix + 'purge <amount>');
                 return;
             }
-            const fetched = await message.channel.fetchMessages({limit: args[0]});
+            const fetched = await message.channel.fetchMessages({limit: args2[0]});
             console.log(fetched.size + ' messages found, deleting...');
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`));
