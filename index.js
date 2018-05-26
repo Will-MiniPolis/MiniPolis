@@ -113,7 +113,7 @@ bot.on("message", async message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let teste = cont.slice(1);
     
-    if (msg.startsWith(prefix + 'apagar)) {
+    if (msg.startsWith(prefix + 'apagar')) {
         async function purge() {
             message.delete();
             if (!message.member.roles.find("name", "bot-commander")) {
