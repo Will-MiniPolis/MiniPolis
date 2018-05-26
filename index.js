@@ -4,59 +4,70 @@ const bot = new Discord.Client({
 });
 
 var Info = new Discord.RichEmbed()
-    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("   ►    Informações sobre o BOT    ◄   ")
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" :video_game:   Jogar MiniPólis   :video_game: ")
+    .setColor(3447003)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://facebook.com/Will.MiniPolis")
+    .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
+    .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ")
+    .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
+
+var Jogar = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" ►    Informações sobre o BOT    ◄ ")
     .setColor(0xff1515)
     .setDescription("\u200b")
-    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://facebook.com/Will.MiniPolis")
     .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
     .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
 var Ajudantes = new Discord.RichEmbed()
-    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("(+)   Ajudantes do MiniPólis   (+)")
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" (+)   Ajudantes do MiniPólis   (+) ")
     .setColor(0xff1515)
     .setDescription("\u200b")
-    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/JzrVRgv.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
     .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
 
 var Equipe = new Discord.RichEmbed()
-    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("(E)   Equipe do MiniPólis   (E)")
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" (E)   Equipe do MiniPólis   (E) ")
     .setColor(0xff1515)
     .setDescription("\u200b")
-    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/T1KZNJ6.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Andrew Equipe-MP ", " • Victor Equipe-MP ");
 
 var Moderadores = new Discord.RichEmbed()
-    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" (☆)   Moderadores do MiniPólis   (☆) ")
     .setColor(0xff1515)
     .setDescription("\u200b")
-    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/DjkjbxW.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Nenhum integrante no momento. ", "\u200b");
 
 var Administradores = new Discord.RichEmbed()
-    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("(A)   Administradores do MiniPólis   (A)")
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" (A)   Administradores do MiniPólis   (A) ")
     .setColor(0xff1515)
     .setDescription("\u200b")
-    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setFooter(" © MiniPólis - Todos os direitos reservados .", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/XpxUHn4.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Rky Smart ", "• Tiago Admin-MP ");
 
 bot.on("ready", async () => {
-    console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
+    console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
     bot.user.setActivity(`Utilize: /comandos`);
 });
 
