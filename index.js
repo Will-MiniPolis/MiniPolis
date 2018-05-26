@@ -11,7 +11,7 @@ var Info = new Discord.RichEmbed()
     .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://facebook.com/Will.MiniPolis")
     .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
-    .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ");
+    .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
 var Ajudantes = new Discord.RichEmbed()
@@ -33,7 +33,7 @@ var Equipe = new Discord.RichEmbed()
     .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/T1KZNJ6.png")
     .setURL("https://minipolis.com.br/")
-    .addField(" • Andrew Equipe-MP ", " • Victor Equipe-MP ")
+    .addField(" • Andrew Equipe-MP ", " • Victor Equipe-MP ");
 
 var Moderadores = new Discord.RichEmbed()
     .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
@@ -43,7 +43,7 @@ var Moderadores = new Discord.RichEmbed()
     .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/DjkjbxW.png")
     .setURL("https://minipolis.com.br/")
-    .addField(" • Nenhum integrante no momento. ", "\u200b")
+    .addField(" • Nenhum integrante no momento. ", "\u200b");
 
 var Administradores = new Discord.RichEmbed()
     .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
@@ -53,7 +53,7 @@ var Administradores = new Discord.RichEmbed()
     .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/XpxUHn4.png")
     .setURL("https://minipolis.com.br/")
-    .addField(" • Rky Smart ", "• Tiago Admin-MP ")
+    .addField(" • Rky Smart ", "• Tiago Admin-MP ");
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
