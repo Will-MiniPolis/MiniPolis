@@ -117,7 +117,7 @@ bot.on("message", async message => {
                 return;
             }
             if (isNaN(arg[0])) {
-                message.channel.send('```diff\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>.');
+                message.channel.send('```diff\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>. \n```');
                 return;
             }
             const fetched = await message.channel.fetchMessages({limit: arg[0]});
