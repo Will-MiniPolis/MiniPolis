@@ -21,7 +21,7 @@ var Jogar = new Discord.RichEmbed()
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://minipolis.com.br")
-    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", "     [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ")
+    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", "     [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
 
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -105,6 +105,36 @@ bot.on("message", async message => {
     if (cmd === `/comandos`) {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
+    
+    
+    
+    
+    let msg = message.content.toUpperCase();
+    let cont = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
+    
+    if (msg.startsWith('/apagar')) { 
+        async function purge() {
+            message.delete();
+            if (!message.member.roles.find("name", "bot-commander")) {
+                message.channel.send('You need the \`bot-commander\` role to use this command.');
+                return;
+            }
+            if (isNaN(args[0])) {
+                message.channel.send('Please use a number as your arguments. \n Usage: ' + prefix + 'purge <amount>');
+                return;
+            }
+            const fetched = await message.channel.fetchMessages({limit: args[0]});
+            console.log(fetched.size + ' messages found, deleting...');
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send(`Error: ${error}`));
+        }
+        purge();
+    }
+    
+    
+    
+    
 });
 
 bot.login(process.env.TOKEN);
