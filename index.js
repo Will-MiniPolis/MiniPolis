@@ -158,7 +158,7 @@ bot.on("message", async message => {
 
     let kickChannel = message.guild.channels.find(`name`, "punições");
     if(!kickChannel) return message.channel.send("Can't find incidents channel.");
-    kickChannel.send(kickEmbed);
+    message.reply(kickChannel.send(kickEmbed));
         
   }
 
