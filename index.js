@@ -61,21 +61,6 @@ if (cmd === `!jogar`){message.channel.send({embed: {
     },
   } } )
 }
-
-
-if (cmd === `!ajudantes`){
-const Ajudantes = new Discord.RichEmbed()
-  .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
-  .setTitle("☆   Ajudantes do MiniPólis   ☆")
-  .setColor(0xff1515)
-  .setDescription("\u200b")
-  .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
-  .setThumbnail("https://i.imgur.com/JzrVRgv.png")
-  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
-  .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
-  .message.channel.send({Ajudantes});
-}
 	
 	
 if (cmd === `!equipe`){
