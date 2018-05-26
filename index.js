@@ -128,15 +128,10 @@ bot.on("message", async message => {
         purge();
     }
     
-    
-    
-    
-if (cmd === prefix + 'ping') {
-        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms -' + sender);
-    }
-    
-    
-    
+
+   if (cmd === prefix + 'ping') {
+        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms seu ping ' + sender'.');
+    }  
     
 });
 
