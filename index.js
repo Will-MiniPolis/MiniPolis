@@ -126,7 +126,6 @@ bot.on("message", async message => {
                 .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
         purge();
-    }
     
 
    if (cmd === prefix + 'ping') {
