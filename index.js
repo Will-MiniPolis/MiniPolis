@@ -74,7 +74,7 @@ const Ajudantes = new Discord.RichEmbed()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
-  message.channel.send({Ajudantes});
+  .message.channel.send({Ajudantes});
 }
 	
 	
