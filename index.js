@@ -110,24 +110,27 @@ bot.on("message", async message => {
     
     
     let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let cont = message.content.slice(prefix.length).split(" ");
+    let teste = cont.slice(1);
     
-    if (msg.startsWith('/apagar')) { 
-        async function apagar() {
+if (msg.startsWith('/apagar')) {
+        async function purge() {
             message.delete();
             if (!message.member.roles.find("name", "bot-commander")) {
                 message.channel.send('You need the \`bot-commander\` role to use this command.');
                 return;
             }
-            if (isNaN(args2[0])) {
-                message.channel.send('```diff\n - Por favor utilize número como um argumento. \n -> /apagar <argumento> \n```');
+            if (isNaN(teste[0])) {
+                message.channel.send('Please use a number as your arguments. \n Usage: purge <amount>');
                 return;
             }
-            const fetched = await message.channel.fetchMessages({limit: args2[0]});
+            const fetched = await message.channel.fetchMessages({limit: teste[0]});
             console.log(fetched.size + ' messages found, deleting...');
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`));
         }
-        apagar();
+        purge();
     }
     
     
