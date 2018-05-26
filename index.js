@@ -81,29 +81,59 @@ bot.on("message", async message => {
         message.channel.send(Info);
     }
 
-    if (cmd === `${prefix}jogar`) {
+    if (cmd === prefix + 'jogar') {
         message.channel.send(Jogar);
     }
 
-    if (cmd === `${prefix}ajudantes`) {
+    if (cmd === prefix + 'ajudantes') {
         message.channel.send(Ajudantes);
     }
 
-    if (cmd === `${prefix}equipe`) {
+    if (cmd === prefix + 'equipe') {
         message.channel.send(Equipe);
     }
 
-    if (cmd === `${prefix}moderadores`) {
+    if (cmd === prefix + 'moderadores') {
         message.channel.send(Moderadores);
     }
 
-    if (cmd === `${prefix}administradores`) {
+    if (cmd === prefix + 'administradores') {
         message.channel.send(Administradores);
     }
 
-    if (cmd === `${prefix}comandos`) {
+    if (cmd === prefix + 'comandos') {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
+    
+    
+    
+    
+    let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let cont = message.content.slice(prefix.length).split(" ");
+    let teste = cont.slice(1);
+    
+    if (msg.startsWith(prefix + 'apagar)) {
+        async function purge() {
+            message.delete();
+            if (!message.member.roles.find("name", "bot-commander")) {
+                message.channel.send('Você não tem o cargo \`bot-commander\` para utilizar este comando.');
+                return;
+            }
+            if (isNaN(teste[0])) {
+                message.channel.send('```diffz\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>.');
+                return;
+            }
+            const fetched = await message.channel.fetchMessages({limit: teste[0]});
+            console.log(fetched.size + ' mensagens sendo deletadas...');
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send(`[ERRO]: ${error}`));
+        }
+        apagar();
+    }
+    
+    
+    
     
 });
 
