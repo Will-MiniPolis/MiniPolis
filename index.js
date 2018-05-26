@@ -132,7 +132,7 @@ bot.on("message", async message => {
     
     
 if (cmd === prefix + 'ping') {
-        message.channel.send('Seu ping está ${new Date().getTime() - message.createdTimestamp} ms.');
+        message.channel.send('Seu ping está ' + ${new Date().getTime() - message.createdTimestamp} + ' ms.');
     }
     
     
