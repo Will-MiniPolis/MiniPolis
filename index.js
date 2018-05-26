@@ -112,8 +112,8 @@ bot.on("message", async message => {
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
-            if (!message.member.roles.find("name", "Mito")) {
-                message.channel.send('Você não tem o cargo \`Mito\` para utilizar este comando.');
+    if(!message.member.roles.some(r=>["Mito1", "Mito2"].includes(r.name)) )
+                message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
                 return;
             }
             if (isNaN(arg[0])) {
@@ -130,8 +130,31 @@ bot.on("message", async message => {
     
 
    if (cmd === prefix + 'ping') {
-        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms seu ping ' + sender + '.');
+        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms - ' + sender + '.');
     }  
+
+    
+    
+    
+    if (cmd === prefix + 'expulsar') {
+        if(!message.member.roles.some(r=>["Mito1", "Mito2"].includes(r.name)) )
+        return message.reply("Sorry, you don't have permissions to use this!");
+        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+        if(!member)
+        return message.reply("Please mention a valid member of this server");
+        if(!member.kickable) 
+        return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
+        let reason = args.slice(1).join(' ');
+        if(!reason) reason = "No reason provided";
+        await member.kick(reason)
+        .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+        message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+
+  }
+
+    
+    
+    
     
 });
 
