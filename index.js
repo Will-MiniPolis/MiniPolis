@@ -64,7 +64,7 @@ if (cmd === `!jogar`){message.channel.send({embed: {
 
 
 if (cmd === `!ajudantes`){
-   message.channel.send({const Ajudantes = new Discord.RichEmbed()
+const Ajudantes = new Discord.RichEmbed()
   .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
   .setTitle("☆   Ajudantes do MiniPólis   ☆")
   .setColor(0xff1515)
@@ -74,7 +74,7 @@ if (cmd === `!ajudantes`){
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
-  message.channel.send({embed});
+  message.channel.send({Ajudantes});
   });
 }
 	
