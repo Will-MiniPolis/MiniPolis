@@ -1,6 +1,19 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
+
+var Ajudantes = new Discord.RichEmbed()
+  .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
+  .setTitle("☆   Ajudantes do MiniPólis   ☆")
+  .setColor(0xff1515)
+  .setDescription("\u200b")
+  .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
+  .setThumbnail("https://i.imgur.com/JzrVRgv.png")
+  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
+  .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
+
+
 bot.on("message", async message => {	
 
   if (message.author.bot) return;
@@ -75,6 +88,10 @@ if (cmd === `!equipe`){
     .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
     message.channel.send(embed);
 }
+	
+if (cmd === `!ajudantes`){
+   message.channel.send(Ajudantes);
+  }
 	
 	
 if (cmd === `!equipe`){
