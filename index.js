@@ -54,8 +54,7 @@ if (cmd === `!jogar`){message.channel.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: ":video_game:   Jogar MiniPólis   :video_game:",
-    url: "https://www.facebook.com/Will.MiniPolis",
-    description: "   ",
+    description: "        ",
     fields: [{
         name: "Para jogar a versão ALPHA do MiniPólis acesse:   ",
         value: "[ALPHA.MiniPolis.com.br](https://Alpha.MiniPolis.com.br/)"
@@ -65,7 +64,7 @@ if (cmd === `!jogar`){message.channel.send({embed: {
       icon_url: bot.user.avatarURL,
       text: "© MiniPólis | 2018 - Todos os direitos reservados."
     },
-  }})
+  } } )
 }
 
 
