@@ -13,6 +13,16 @@ var Ajudantes = new Discord.RichEmbed()
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
 
+var Equipe = new Discord.RichEmbed()
+  .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
+  .setTitle("(E)   Equipe do MiniPólis   (E)")
+  .setColor(0xff1515)
+  .setDescription("\u200b")
+  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
+  .setThumbnail("https://i.imgur.com/JzrVRgv.png")
+  .setURL("https://minipolis.com.br/")
+  .addField(" • Andrew Equipe-MP ", " • Victor Equipe-MP ")
+
 var Moderadores = new Discord.RichEmbed()
   .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
   .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
