@@ -4,6 +4,17 @@ const bot = new Discord.Client({
 });
 
 
+var Info = new Discord.RichEmbed()
+    .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle("   ►    Informações sobre o BOT    ◄   ")
+    .setColor(0xff1515)
+    .setDescription("\u200b")
+    .setFooter("© MiniPólis - Todos os direitos reservados.", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://facebook.com/Will.MiniPolis")
+    .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
+    .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ");
+    .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
+
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
     .setTitle("(+)   Ajudantes do MiniPólis   (+)")
@@ -61,35 +72,8 @@ bot.on("message", async message => {
     let args = messageArray.slice(1);
 
 
-    if (cmd === `/info`) {
-        message.channel.send({
-            embed: {
-                color: 3447003,
-                author: {
-                    name: bot.user.username,
-                    icon_url: bot.user.avatarURL
-                },
-                title: "►   Informações sobre o BOT   ◄",
-                url: "https://www.facebook.com/Will.MiniPolis",
-                fields: [{
-                        name: "Desenvolvedor:                                                                                                   Versão:",
-                        value: "Will Ajudante-MP                                                          1.0.0"
-                    },
-                    {
-                        name: "Atualização:                                                                                                                   Nome do BOT:",
-                        value: "26/05/2018                                                                       [MOD] - BR"
-                    },
-                    {
-                        name: "Idioma:                                                                                                                                      Proprietário:",
-                        value: "Português (Brasil)                                                           [www.minipolis.com.br](https://www.minipolis.com.br/)"
-                    },
-                ],
-                footer: {
-                    icon_url: "https://i.imgur.com/flUGdY9.png",
-                    text: "© MiniPólis - Todos os direitos reservados."
-                },
-            }
-        })
+if (cmd === `/infp`) {
+        message.channel.send(Info);
     }
 
 
