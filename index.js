@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 
 var Ajudantes = new Discord.RichEmbed()
-  .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
+  .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
   .setTitle("(+)   Ajudantes do MiniPólis   (+)")
   .setColor(0xff1515)
   .setDescription("\u200b")
@@ -12,6 +12,16 @@ var Ajudantes = new Discord.RichEmbed()
   .setURL("https://MiniPolis.com.br/")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
+
+var Moderadores = new Discord.RichEmbed()
+  .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
+  .setTitle("(*)   Moderadores do MiniPólis   (*)")
+  .setColor(0xff1515)
+  .setDescription("\u200b")
+  .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
+  .setThumbnail("https://i.imgur.com/DjkjbxW.png")
+  .setURL("https://MiniPolis.com.br/")
+  .addField(" • Nenhum integrante no momento. ")
 
 
 bot.on("ready", async () => {
