@@ -33,6 +33,16 @@ var Moderadores = new Discord.RichEmbed()
   .setURL("https://minipolis.com.br/")
   .addField(" • Nenhum integrante no momento. ", "\u200b")
 
+var Administradores = new Discord.RichEmbed()
+  .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
+  .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
+  .setColor(0xff1515)
+  .setDescription("\u200b")
+  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
+  .setThumbnail("https://i.imgur.com/XpxUHn4.png")
+  .setURL("https://minipolis.com.br/")
+  .addField(" • Rky Smart ", "• Tiago Admin-MP ")
+
 
 bot.on("ready", async () => {
   console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
