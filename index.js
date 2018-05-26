@@ -111,7 +111,7 @@ bot.on("message", async message => {
     
     let msg = message.content.toUpperCase();
     let sender = message.author;
-    let cont = message.content.slice(prefix.length).split(" ");
+    let cont = message.content.slice('/apagar'.length).split(" ");
     let teste = cont.slice(1);
     
 if (msg.startsWith('/apagar')) {
@@ -132,7 +132,6 @@ if (msg.startsWith('/apagar')) {
         }
         purge();
     }
-    
     
     
     
