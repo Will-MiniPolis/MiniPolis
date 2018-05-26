@@ -123,9 +123,9 @@ bot.on("message", async message => {
             const fetched = await message.channel.fetchMessages({limit: arg[0]});
             console.log(sender + ' apagou [' + fetched.size + '] mensagens!');
             message.channel.bulkDelete(fetched)
-                .catch(error => message.channel.send(`[ERRO]: ${error}`));
-        }
-        purge();
+            .catch(error => message.channel.send(`[ERRO]: ${error}`));
+            purge();
+            }
     
 
    if (cmd === prefix + 'ping') {
