@@ -69,33 +69,21 @@ if (cmd === `!jogar`){message.channel.send({embed: {
 }
 
 
-if (cmd === `!ajudantes`){message.channel.send({embed: {
-    color: 0xff1515,
-    author: {
-      name: bot.user.username,
-      icon_url: bot.user.avatarURL
-    },
-    title: "☆   Ajudantes do MiniPólis   ☆",
-    url: "https://MiniPolis.com.br/",
-    description: "\u200b",
-    thumbnail: "https://i.imgur.com/JzrVRgv.png",
-    fields: [{
-        name: " • Ale Ajudante-MP ",
-        value: " • Gelff Ajudante-MP  "
-    },
-	{
-        name: " • Will Ajudante-MP ",
-        value: " • William Ajudante-MP "
-    },
-  ],
-    footer: {
-      icon_url: bot.user.avatarURL,
-      text: "© MiniPólis | 2018 - Todos os direitos reservados."
-    },
-  } } )
-}
-
-
+const Ajudantes = new Discord.RichEmbed()
+  .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
+  .setTitle("☆   Ajudantes do MiniPólis   ☆")
+  .setColor(0xff1515)
+  .setDescription("\u200b")
+  .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
+  .setThumbnail("https://i.imgur.com/JzrVRgv.png")
+  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
+  .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
+if (cmd === `!ajudantes`){
+   message.channel.send({Ajudantes});
+  }
+	
+	
 if (cmd === `!equipe`){
    message.channel.send("```md\n# Equipe do MiniPólis: \n\n• Andrew Equipe-MP \n• Victor Equipe-MP \n```");
   }
