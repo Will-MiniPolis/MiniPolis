@@ -54,7 +54,7 @@ if (cmd === `/info`){
       },
       {
         name: "Atualização:                                                                                                                   Nome do BOT:",
-        value: "25/05/2018                                                                       Moderador"
+        value: "25/05/2018                                                                       [MOD] - BR"
       },
       {
         name: "Idioma:                                                                                                                                      Proprietário:",
@@ -85,7 +85,7 @@ if (cmd === `/jogar`){message.channel.send({embed: {
   ],
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "© MiniPólis | 2018 - Todos os direitos reservados."
+      text: "© MiniPólis - Todos os direitos reservados."
     },
   } } )
 }
