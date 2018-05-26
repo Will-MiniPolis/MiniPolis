@@ -5,7 +5,7 @@ const prefix = '/';
 var Info = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Informações sobre o BOT    ◄ ")
-    .setColor(0xff1515)
+    .setColor(0xffff00)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://facebook.com/Will.MiniPolis")
@@ -25,7 +25,7 @@ var Jogar = new Discord.RichEmbed()
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" (+)   Ajudantes do MiniPólis   (+) ")
-    .setColor(0xff1515)
+    .setColor(0x00ffff)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/JzrVRgv.png")
@@ -36,7 +36,7 @@ var Ajudantes = new Discord.RichEmbed()
 var Equipe = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" (E)   Equipe do MiniPólis   (E) ")
-    .setColor(0xff1515)
+    .setColor(0x00ffff)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/T1KZNJ6.png")
@@ -46,7 +46,7 @@ var Equipe = new Discord.RichEmbed()
 var Moderadores = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" (☆)   Moderadores do MiniPólis   (☆) ")
-    .setColor(0xff1515)
+    .setColor(0x00ffff)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/DjkjbxW.png")
@@ -56,12 +56,23 @@ var Moderadores = new Discord.RichEmbed()
 var Administradores = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" (A)   Administradores do MiniPólis   (A) ")
-    .setColor(0xff1515)
+    .setColor(0x00ffff)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados .", "https://i.imgur.com/flUGdY9.png")
     .setThumbnail("https://i.imgur.com/XpxUHn4.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Rky Smart ", "• Tiago Admin-MP ");
+
+var Expulsar = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" :x:   Usuário expulso do Discord   :x: ")
+    .setColor(0xff1515)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados .", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://minipolis.com.br/")
+    .addField("Usuário: ${member}", "ID: ${member.id}")
+    .addField("Expulso por: <@${message.author.id}>", "Motivo: " + reason")
+    .addField("Expulso no canal: " + message.channel, " \u200b ");
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
@@ -134,31 +145,17 @@ bot.on("message", async message => {
     if (cmd === prefix + 'expulsar') {
         if(!message.member.roles.some(r=>["Mito"].includes(r.name)) )
         return message.reply("```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```");
-        
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-        
         if(!member)
-        return message.reply("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> " + prefix + "expulsar @<Usuário> <Motivo> \n```");
+        return message("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> " + prefix + "expulsar @<Usuário> <Motivo> \n```");
         if(!member.kickable) 
-        return message.reply("```diff\n- Este usuário não pode ser expulso. \n```");
-        
+        return message("```diff\n- Este usuário não pode ser expulso. \n```");
         let reason = args.slice(1).join(' ');
-        
         if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```";
         await member.kick(reason)
-
-    let kickEmbed = new Discord.RichEmbed()
-    .setDescription("~Kick~")
-    .setColor("#e56b00")
-    .addField("Kicked User", `${member} with ID ${member.id}`)
-    .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
-    .addField("Kicked In", message.channel)
-    .addField("Tiime", message.createdAt)
-    .addField("Reason", reason);
-
-    let kickChannel = message.guild.channels.find(`name`, "punições");
-    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
-    message.reply(kickChannel.send(kickEmbed));
+        let kickChannel = message.guild.channels.find(`name`, "punições");
+        if(!kickChannel) return message.channel.send("Can't find incidents channel.");
+        message.(kickChannel.send(Expulsar));
         
   }
 
