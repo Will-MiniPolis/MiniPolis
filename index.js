@@ -75,7 +75,6 @@ const Ajudantes = new Discord.RichEmbed()
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
   message.channel.send({Ajudantes});
-  });
 }
 	
 	
