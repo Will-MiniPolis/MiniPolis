@@ -54,6 +54,7 @@ if (cmd === `!jogar`){message.channel.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: ":video_game:   Jogar MiniPólis   :video_game:",
+    url: "https://MiniPolis.com.br/",
     description: "\u200b",
     fields: [{
         name: "Para jogar a versão ALPHA do MiniPólis acesse:   ",
@@ -68,9 +69,31 @@ if (cmd === `!jogar`){message.channel.send({embed: {
 }
 
 
-if (cmd === `!ajudantes`){
-   message.channel.send("```md\n# Ajudantes do MiniPólis: \n\n• Ale Ajudante-MP \n• Gelff Ajudante-MP \n• Will Ajudante-MP \n• William Ajudante-MP \n```");
-  }
+if (cmd === `!ajudantes`){message.channel.send({embed: {
+    color: 0xff1515,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: "☆   Ajudantes do MiniPólis   ☆",
+    url: "https://MiniPolis.com.br/",
+    description: "\u200b",
+    thumbnail: "https://i.imgur.com/JzrVRgv.png",
+    fields: [{
+        name: " • Ale Ajudante-MP ",
+        value: " • Gelff Ajudante-MP  "
+    },
+	{
+        name: " • Will Ajudante-MP ",
+        value: " • William Ajudante-MP "
+    },
+  ],
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© MiniPólis | 2018 - Todos os direitos reservados."
+    },
+  } } )
+}
 
 
 if (cmd === `!equipe`){
