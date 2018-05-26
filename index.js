@@ -72,7 +72,7 @@ var Expulsar = new Discord.RichEmbed()
     .setURL("https://minipolis.com.br/")
     .addField("Usuário: ${member}", "ID: ${member.id}")
     .addField("Expulso por: <@${message.author.id}>", "Motivo: &{reason} ")
-    .addField("Expulso no canal: " + message.channel, " \u200b ");
+    .addField("Expulso no canal: ${message.channel}", " \u200b ");
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
