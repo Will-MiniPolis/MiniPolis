@@ -15,13 +15,13 @@ var Ajudantes = new Discord.RichEmbed()
 
 var Moderadores = new Discord.RichEmbed()
   .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-  .setTitle("(*)   Moderadores do MiniPólis   (*)")
+  .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
   .setColor(0xff1515)
   .setDescription("\u200b")
   .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
   .setThumbnail("https://i.imgur.com/DjkjbxW.png")
   .setURL("https://minipolis.com.br/")
-  .addField(" • Nenhum integrante no momento. ")
+  .addField(" • Nenhum integrante no momento. ", "\u200b")
 
 
 bot.on("ready", async () => {
