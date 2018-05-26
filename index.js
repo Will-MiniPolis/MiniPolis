@@ -42,9 +42,31 @@ if (cmd === `!info`){
     footer: {
       icon_url: bot.user.avatarURL,
       text: "© MiniPólis | 2018 - Todos os direitos reservados."
-    }
-  }})
-}
+    };
+  }; }; );
+};
+
+
+if (cmd === `!jogar`){message.channel.send({embed: {
+    color: 0x00ff40,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: ":video_game:   Jogar MiniPólis   :video_game",
+    url: "https://www.facebook.com/Will.MiniPolis",
+    description:"   ",
+    fields: [{
+        name: "Para jogar a versão ALPHA do MiniPólis acesse:   ",
+        value: "[ALPHA.MiniPolis.com.br](https://Alpha.MiniPolis.com.br/)"
+    };
+  ];
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© MiniPólis | 2018 - Todos os direitos reservados."
+    };
+  }; }; ); 
+};
 
 
 if (cmd === `!ajudantes`){
