@@ -112,7 +112,7 @@ bot.on("message", async message => {
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
-        if (!message.member.roles.find("name", ["Mito1", "Mito2"])) {
+        if (!message.member.roles.find("name", "Mito")) {
                 message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
                 return;
             }
