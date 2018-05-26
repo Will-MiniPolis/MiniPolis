@@ -19,7 +19,7 @@ var Equipe = new Discord.RichEmbed()
   .setColor(0xff1515)
   .setDescription("\u200b")
   .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
-  .setThumbnail("https://i.imgur.com/JzrVRgv.png")
+  .setThumbnail("https://i.imgur.com/T1KZNJ6.png")
   .setURL("https://minipolis.com.br/")
   .addField(" • Andrew Equipe-MP ", " • Victor Equipe-MP ")
 
