@@ -74,7 +74,7 @@ bot.on("message", async message => {
     if (message.channel.type === "dm") return;
     
     let msg = message.content.toUpperCase();
-    let sender = message.author;
+    let sender = member.user.tag;
     let cont = message.content.slice(prefix.length).split(" ");
     let arg = cont.slice(1);
     let messageArray = message.content.split(" ");
