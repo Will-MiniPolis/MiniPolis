@@ -113,8 +113,8 @@ bot.on("message", async message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let teste = cont.slice(1);
     
-    if (msg.startsWith(prefix + 'apagar')) {
-        async function apagar() {
+    if (cmd === prefix + 'apagar') {
+        async function purge() {
             message.delete();
             if (!message.member.roles.find("name", "bot-commander")) {
                 message.channel.send('Você não tem o cargo \`bot-commander\` para utilizar este comando.');
@@ -129,7 +129,7 @@ bot.on("message", async message => {
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
-        apagar();
+        purge();
     }
     
     
