@@ -136,6 +136,7 @@ if (msg.startsWith('/apagar')) {
     
     
     
+    
 });
 
 bot.login(process.env.TOKEN);
