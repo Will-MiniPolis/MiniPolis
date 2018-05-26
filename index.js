@@ -54,7 +54,7 @@ if (cmd === `!jogar`){message.channel.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: ":video_game:   Jogar MiniPólis   :video_game:",
-    description: "        ",
+    description: "\n        ",
     fields: [{
         name: "Para jogar a versão ALPHA do MiniPólis acesse:   ",
         value: "[ALPHA.MiniPolis.com.br](https://Alpha.MiniPolis.com.br/)"
