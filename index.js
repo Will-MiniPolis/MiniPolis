@@ -9,7 +9,7 @@ var Ajudantes = new Discord.RichEmbed()
   .setDescription("\u200b")
   .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
   .setThumbnail("https://i.imgur.com/JzrVRgv.png")
-  .setURL("https://MiniPolis.com.br/")
+  .setURL("https://minipolis.com.br/")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
 
@@ -20,7 +20,7 @@ var Moderadores = new Discord.RichEmbed()
   .setDescription("\u200b")
   .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
   .setThumbnail("https://i.imgur.com/DjkjbxW.png")
-  .setURL("https://MiniPolis.com.br/")
+  .setURL("https://minipolis.com.br/")
   .addField(" • Nenhum integrante no momento. ")
 
 
@@ -58,7 +58,7 @@ if (cmd === `/info`){
       },
       {
         name: "Idioma:                                                                                                                                      Proprietário:",
-        value: "Português (Brasil)                                                           [www.MiniPolis.com.br](https://www.minipolis.com.br/)"
+        value: "Português (Brasil)                                                           [www.minipolis.com.br](https://www.minipolis.com.br/)"
       },
     ],
     footer: {
@@ -76,11 +76,11 @@ if (cmd === `/jogar`){message.channel.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: ":video_game:   Jogar MiniPólis   :video_game:",
-    url: "https://MiniPolis.com.br/",
+    url: "https://minipolis.com.br/",
     description: "\u200b",
     fields: [{
         name: "Para jogar a versão ALPHA do MiniPólis acesse:   ",
-        value: "[ALPHA.MiniPolis.com.br](https://Alpha.MiniPolis.com.br/)"
+        value: "[alpha.minipolis.com.br](https://alpha.minipolis.com.br/)"
     },
   ],
     footer: {
@@ -93,15 +93,15 @@ if (cmd === `/jogar`){message.channel.send({embed: {
 if (cmd === `/ajudantes`){
    message.channel.send(Ajudantes);
   }
-	
-	
+
+
 if (cmd === `/equipe`){
-   message.channel.send("```md\n# Equipe do MiniPólis: \n\n• Andrew Equipe-MP \n• Victor Equipe-MP \n```");
+   message.channel.send(Equipe);
   }
 
 
 if (cmd === `/moderadores`){
-   message.channel.send("```md\n# Moderadores do MiniPólis: \n\n• Nenhum integrante no momento. \n```");
+   message.channel.send(Moderadores);
   }
 
 
