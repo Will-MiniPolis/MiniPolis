@@ -150,7 +150,7 @@ bot.on("message", async message => {
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
     .setColor("#e56b00")
-    .addField("Kicked User", `${member} with ID ${kUser.id}`)
+    .addField("Kicked User", `${member} with ID ${member.id}`)
     .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
     .addField("Kicked In", message.channel)
     .addField("Tiime", message.createdAt)
