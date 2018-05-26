@@ -7,7 +7,7 @@ var Ajudantes = new Discord.RichEmbed()
   .setTitle("(+)   Ajudantes do MiniPólis   (+)")
   .setColor(0xff1515)
   .setDescription("\u200b")
-  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
+  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
   .setThumbnail("https://i.imgur.com/JzrVRgv.png")
   .setURL("https://minipolis.com.br/")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
@@ -18,7 +18,7 @@ var Moderadores = new Discord.RichEmbed()
   .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
   .setColor(0xff1515)
   .setDescription("\u200b")
-  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
+  .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
   .setThumbnail("https://i.imgur.com/DjkjbxW.png")
   .setURL("https://minipolis.com.br/")
   .addField(" • Nenhum integrante no momento. ", "\u200b")
@@ -62,7 +62,7 @@ if (cmd === `/info`){
       },
     ],
     footer: {
-      icon_url: bot.user.avatarURL,
+      icon_url: "https://i.imgur.com/flUGdY9.png",
       text: "© MiniPólis - Todos os direitos reservados."
     },
   } } )
@@ -84,7 +84,7 @@ if (cmd === `/jogar`){message.channel.send({embed: {
     },
   ],
     footer: {
-      icon_url: bot.user.avatarURL,
+      icon_url: "https://i.imgur.com/flUGdY9.png",
       text: "© MiniPólis - Todos os direitos reservados."
     },
   } } )
@@ -106,7 +106,7 @@ if (cmd === `/moderadores`){
 
 
 if (cmd === `/administradores`){
-   message.channel.send("```md\n# Administradores do MiniPólis: \n\n• Rky Smart \n• Tiago Admin-MP \n```");
+   message.channel.send(Administradores);
   }
 
 
