@@ -63,7 +63,7 @@ if (cmd === `/info`){
     ],
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "© MiniPólis | 2018 - Todos os direitos reservados."
+      text: "© MiniPólis - Todos os direitos reservados."
     },
   } } )
 }
