@@ -117,11 +117,11 @@ bot.on("message", async message => {
                 return;
             }
             if (isNaN(arg[0])) {
-                message.channel.send('```diff\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>. \n```');
+                message.channel.send('```diff\n- Por favor utilize números como argumento. \n-> ' + prefix + 'apagar <argumento> \n```');
                 return;
             }
             const fetched = await message.channel.fetchMessages({limit: arg[0]});
-            console.log(fetched.size + ' mensagens sendo deletadas...');
+            console.log('[' + fetched.size + '] mensagens sendo deletadas...');
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
