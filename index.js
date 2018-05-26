@@ -121,7 +121,7 @@ bot.on("message", async message => {
                 return;
             }
             const fetched = await message.channel.fetchMessages({limit: arg[0]});
-            console.log('[' + fetched.size + '] mensagens sendo deletadas...');
+            console.log(sender + ' apagou [' + fetched.size + '] mensagens!');
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
