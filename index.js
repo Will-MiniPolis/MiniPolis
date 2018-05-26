@@ -35,7 +35,7 @@ var Moderadores = new Discord.RichEmbed()
 
 var Administradores = new Discord.RichEmbed()
   .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
-  .setTitle("(☆)   Moderadores do MiniPólis   (☆)")
+  .setTitle("(A)   Administradores do MiniPólis   (A)")
   .setColor(0xff1515)
   .setDescription("\u200b")
   .setFooter("© MiniPólis - Todos os direitos reservados", "https://i.imgur.com/flUGdY9.png")
