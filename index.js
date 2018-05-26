@@ -145,12 +145,12 @@ bot.on("message", async message => {
     if (cmd === prefix + 'expulsar') {
         if(!message.member.roles.some(r=>["Mito"].includes(r.name)) )
         return message.reply("```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```");
-        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let member = message.mentions.members.first() || message.guild.members.get(arg[0]);
         if(!member)
         return message("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> " + prefix + "expulsar @<Usuário> <Motivo> \n```");
         if(!member.kickable) 
         return message("```diff\n- Este usuário não pode ser expulso. \n```");
-        let reason = args.slice(1).join(' ');
+        let reason = arg.slice(1).join(' ');
         if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```";
         await member.kick(reason)
         let kickChannel = message.guild.channels.find(`name`, "punições");
