@@ -114,7 +114,7 @@ bot.on("message", async message => {
     let teste = cont.slice(1);
     
     if (msg.startsWith(prefix + 'apagar')) {
-        async function purge() {
+        async function apagar() {
             message.delete();
             if (!message.member.roles.find("name", "bot-commander")) {
                 message.channel.send('Você não tem o cargo \`bot-commander\` para utilizar este comando.');
