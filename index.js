@@ -112,8 +112,8 @@ bot.on("message", async message => {
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
-            if (!message.member.roles.find("name", "bot-commander")) {
-                message.channel.send('Você não tem o cargo \`bot-commander\` para utilizar este comando.');
+            if (!message.member.roles.find("name", "Mito")) {
+                message.channel.send('Você não tem o cargo \`Mito\` para utilizar este comando.');
                 return;
             }
             if (isNaN(arg[0])) {
