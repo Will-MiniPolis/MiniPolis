@@ -16,7 +16,7 @@ var Ajudantes = new Discord.RichEmbed()
 
 bot.on("ready", async () => {
   console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
-  bot.user.setActivity(`Use: !comandos`);
+  bot.user.setActivity(`Utilize: /comandos`);
 });
 
 bot.on("message", async message => {	
@@ -29,7 +29,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   
 
-if (cmd === `!info`){
+if (cmd === `/info`){
   message.channel.send({embed: {
     color: 3447003,
     author: {
@@ -59,7 +59,7 @@ if (cmd === `!info`){
 }
 
 
-if (cmd === `!jogar`){message.channel.send({embed: {
+if (cmd === `/jogar`){message.channel.send({embed: {
     color: 0x00ff40,
     author: {
       name: bot.user.username,
@@ -80,22 +80,22 @@ if (cmd === `!jogar`){message.channel.send({embed: {
   } } )
 }
 	
-if (cmd === `!ajudantes`){
+if (cmd === `/ajudantes`){
    message.channel.send(Ajudantes);
   }
 	
 	
-if (cmd === `!equipe`){
+if (cmd === `/equipe`){
    message.channel.send("```md\n# Equipe do MiniPólis: \n\n• Andrew Equipe-MP \n• Victor Equipe-MP \n```");
   }
 
 
-if (cmd === `!moderadores`){
+if (cmd === `/moderadores`){
    message.channel.send("```md\n# Moderadores do MiniPólis: \n\n• Nenhum integrante no momento. \n```");
   }
 
 
-if (cmd === `!administradores`){
+if (cmd === `/administradores`){
    message.channel.send("```md\n# Administradores do MiniPólis: \n\n• Rky Smart \n• Tiago Admin-MP \n```");
   }
 
