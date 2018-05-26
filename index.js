@@ -130,7 +130,7 @@ bot.on("message", async message => {
     
 
    if (cmd === prefix + 'ping') {
-        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms seu ping ' + sender'.');
+        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms seu ping ' + sender + '.');
     }  
     
 });
