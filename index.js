@@ -144,7 +144,7 @@ bot.on("message", async message => {
         
         let reason = args.slice(1).join(' ');
         
-        if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```;
+        if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```";
         await member.kick(reason)
         .catch(error => message.reply(`Desculpe ${message.author}, o usuário não foi expulso pelo erro: ${error}`));
         message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
