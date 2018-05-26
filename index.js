@@ -77,31 +77,31 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if (cmd === `${prefix}info`) {
+    if (cmd === prefix + 'info') {
         message.channel.send(Info);
     }
 
-    if (cmd === `/jogar`) {
+    if (cmd === `${prefix}jogar`) {
         message.channel.send(Jogar);
     }
 
-    if (cmd === `/ajudantes`) {
+    if (cmd === `${prefix}ajudantes`) {
         message.channel.send(Ajudantes);
     }
 
-    if (cmd === `/equipe`) {
+    if (cmd === `${prefix}equipe`) {
         message.channel.send(Equipe);
     }
 
-    if (cmd === `/moderadores`) {
+    if (cmd === `${prefix}moderadores`) {
         message.channel.send(Moderadores);
     }
 
-    if (cmd === `/administradores`) {
+    if (cmd === `${prefix}administradores`) {
         message.channel.send(Administradores);
     }
 
-    if (cmd === `/comandos`) {
+    if (cmd === `${prefix}comandos`) {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
     
