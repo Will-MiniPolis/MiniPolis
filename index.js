@@ -74,7 +74,6 @@ if (cmd === `!equipe`){
     .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
     .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
     message.channel.send(embed);
-    break;
 }
 	
 	
