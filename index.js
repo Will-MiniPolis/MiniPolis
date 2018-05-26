@@ -72,7 +72,11 @@ bot.on("message", async message => {
 
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
-
+    
+    let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let cont = message.content.slice(prefix.length).split(" ");
+    let arg = cont.slice(1);
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
@@ -105,14 +109,6 @@ bot.on("message", async message => {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
     
-    
-    
-    
-    let msg = message.content.toUpperCase();
-    let sender = message.author;
-    let cont = message.content.slice(prefix.length).split(" ");
-    let teste = cont.slice(1);
-    
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
@@ -120,20 +116,17 @@ bot.on("message", async message => {
                 message.channel.send('Você não tem o cargo \`bot-commander\` para utilizar este comando.');
                 return;
             }
-            if (isNaN(teste[0])) {
-                message.channel.send('```diffz\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>.');
+            if (isNaN(arg[0])) {
+                message.channel.send('```diff\n - Por favor utilize números como argumento. \n -> ' + prefix + 'apagar <argumento>.');
                 return;
             }
-            const fetched = await message.channel.fetchMessages({limit: teste[0]});
+            const fetched = await message.channel.fetchMessages({limit: arg[0]});
             console.log(fetched.size + ' mensagens sendo deletadas...');
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
         purge();
     }
-    
-    
-    
     
 });
 
