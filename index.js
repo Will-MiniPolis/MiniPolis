@@ -3,7 +3,6 @@ const bot = new Discord.Client({
     disableEveryone: true
 });
 
-
 var Info = new Discord.RichEmbed()
     .setAuthor("MOD - [BR]", "https://i.imgur.com/DjkjbxW.png")
     .setTitle("   ►    Informações sobre o BOT    ◄   ")
@@ -56,7 +55,6 @@ var Administradores = new Discord.RichEmbed()
     .setURL("https://minipolis.com.br/")
     .addField(" • Rky Smart ", "• Tiago Admin-MP ")
 
-
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
     bot.user.setActivity(`Utilize: /comandos`);
@@ -71,11 +69,9 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-
-if (cmd === `/infp`) {
+if (cmd === `/info`) {
         message.channel.send(Info);
     }
-
 
     if (cmd === `/jogar`) {
         message.channel.send({
@@ -104,27 +100,21 @@ if (cmd === `/infp`) {
         message.channel.send(Ajudantes);
     }
 
-
     if (cmd === `/equipe`) {
         message.channel.send(Equipe);
     }
-
 
     if (cmd === `/moderadores`) {
         message.channel.send(Moderadores);
     }
 
-
     if (cmd === `/administradores`) {
         message.channel.send(Administradores);
     }
 
-
     if (cmd === `/comandos`) {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
-
-
 });
 
 bot.login(process.env.TOKEN);
