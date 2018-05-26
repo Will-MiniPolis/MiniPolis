@@ -127,29 +127,41 @@ bot.on("message", async message => {
     }
             purge();
             }
-    
-
-   if (cmd === prefix + 'ping') {
-        message.channel.send(new Date().getTime() - message.createdTimestamp + 'ms - ' + sender + '.');
-    }  
 
     
     
     
     if (cmd === prefix + 'expulsar') {
-        if(!message.member.roles.some(r=>["Mito1", "Mito2"].includes(r.name)) )
-        return message.reply("Sorry, you don't have permissions to use this!");
+        if(!message.member.roles.some(r=>["Mito"].includes(r.name)) )
+        return message.reply("```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```");
+        
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+        
         if(!member)
-        return message.reply("Please mention a valid member of this server");
+        return message.reply("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> ' + prefix + 'expulsar @<Usuário> <Motivo> \n```");
         if(!member.kickable) 
-        return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
+        return message.reply("```diff\n- Este usuário não pode ser expulso. \n```");
+        
         let reason = args.slice(1).join(' ');
-        if(!reason) reason = "No reason provided";
+        
+        if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```;
         await member.kick(reason)
-        .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+        .catch(error => message.reply(`Desculpe ${message.author}, o usuário não foi expulso pelo erro: ${error}`));
         message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
+            let kickEmbed = new Discord.RichEmbed()
+    .setDescription("~Kick~")
+    .setColor("#e56b00")
+    .addField("Kicked User", `${member} with ID ${kUser.id}`)
+    .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
+    .addField("Kicked In", message.channel)
+    .addField("Tiime", message.createdAt)
+    .addField("Reason", reason);
+
+    let kickChannel = message.guild.channels.find(`name`, "punições");
+    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
+    kickChannel.send(kickEmbed);
+        
   }
 
     
