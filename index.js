@@ -77,7 +77,7 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if (cmd === ` + prefix + `info`) {
+    if (cmd === `${prefix}info`) {
         message.channel.send(Info);
     }
 
