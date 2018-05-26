@@ -4,12 +4,12 @@ const bot = new Discord.Client({disableEveryone: true});
 
 var Ajudantes = new Discord.RichEmbed()
   .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
-  .setTitle("☆   Ajudantes do MiniPólis   ☆")
+  .setTitle("(+)   Ajudantes do MiniPólis   (+)")
   .setColor(0xff1515)
   .setDescription("\u200b")
   .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
   .setThumbnail("https://i.imgur.com/JzrVRgv.png")
-  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  .setURL("https://MiniPolis.com.br/")
   .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
   .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ");
 
@@ -78,20 +78,6 @@ if (cmd === `!jogar`){message.channel.send({embed: {
       text: "© MiniPólis | 2018 - Todos os direitos reservados."
     },
   } } )
-}
-	
-if (cmd === `!equipe`){	
-  var embed = new Discord.RichEmbed()
-    .setAuthor("Moderador", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle("(+)   Ajudantes do MiniPólis   (+)")
-    .setColor(0xff1515)
-    .setDescription("\u200b")
-    .setFooter("© MiniPólis | 2018 - Todos os direitos reservados", "https://i.imgur.com/DjkjbxW.png")
-    .setThumbnail("https://i.imgur.com/JzrVRgv.png")
-    .setURL("https://MiniPolis.com.br/")
-    .addField(" • Ale Ajudante-MP ", " • Gelff Ajudante-MP ")
-    .addField(" • Will Ajudante-MP ", " • William Ajudante-MP ")
-    message.channel.send(embed);
 }
 	
 if (cmd === `!ajudantes`){
