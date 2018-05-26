@@ -63,17 +63,6 @@ var Administradores = new Discord.RichEmbed()
     .setURL("https://minipolis.com.br/")
     .addField(" • Rky Smart ", "• Tiago Admin-MP ");
 
-var Expulsar = new Discord.RichEmbed()
-    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle(" :x:   Usuário expulso do Discord   :x: ")
-    .setColor(0xff1515)
-    .setDescription(" \u200b ")
-    .setFooter(" © MiniPólis - Todos os direitos reservados .", "https://i.imgur.com/flUGdY9.png")
-    .setURL("https://minipolis.com.br/")
-    .addField("Usuário: ${member}", "ID: ${member.id}")
-    .addField("Expulso por: <@${message.author.id}>", "Motivo: &{reason} ")
-    .addField("Expulso no canal: ${message.channel}", " \u200b ");
-
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
     bot.user.setActivity(`Utilize: /comandos`);
@@ -83,7 +72,7 @@ bot.on("message", async message => {
 
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
-    
+
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
@@ -119,11 +108,11 @@ bot.on("message", async message => {
     if (cmd === prefix + 'comandos') {
         message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
     }
-    
+
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
-        if (!message.member.roles.find("name", "Mito")) {
+            if (!message.member.roles.find("name", "Mito")) {
                 message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
                 return;
             }
@@ -131,38 +120,16 @@ bot.on("message", async message => {
                 message.channel.send('```diff\n- Por favor utilize números como argumento. \n-> ' + prefix + 'apagar <argumento> \n```');
                 return;
             }
-            const fetched = await message.channel.fetchMessages({limit: arg[0]});
+            const fetched = await message.channel.fetchMessages({
+                limit: arg[0]
+            });
             console.log(sender + ' apagou [' + fetched.size + '] mensagens!');
             message.channel.bulkDelete(fetched)
-            .catch(error => message.channel.send(`[ERRO]: ${error}`));
+                .catch(error => message.channel.send(`[ERRO]: ${error}`));
+        }
+        purge();
     }
-            purge();
-            }
 
-    
-    
-    
-    if (cmd === prefix + 'expulsar') {
-        if(!message.member.roles.some(r=>["Mito"].includes(r.name)) )
-        return message.reply("```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```");
-        let member = message.mentions.members.first() || message.guild.members.get(arg[0]);
-        if(!member)
-        return message("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> " + prefix + "expulsar @<Usuário> <Motivo> \n```");
-        if(!member.kickable) 
-        return message("```diff\n- Este usuário não pode ser expulso. \n```");
-        let reason = arg.slice(1).join(' ');
-        if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```";
-        await member.kick(reason)
-        let kickChannel = message.guild.channels.find(`name`, "punições");
-        if(!kickChannel) return message.channel.send("Can't find incidents channel.");
-        message.kickChannel.send(Expulsar);
-        
-  }
-
-    
-    
-    
-    
 });
 
 bot.login(process.env.TOKEN);
