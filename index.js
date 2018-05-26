@@ -138,7 +138,7 @@ bot.on("message", async message => {
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
         
         if(!member)
-        return message.reply("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> ' + prefix + 'expulsar @<Usuário> <Motivo> \n```");
+        return message.reply("```diff\n- Por favor siga o exemplo do comando abaixo: \n-> " + prefix + "expulsar @<Usuário> <Motivo> \n```");
         if(!member.kickable) 
         return message.reply("```diff\n- Este usuário não pode ser expulso. \n```");
         
@@ -146,10 +146,8 @@ bot.on("message", async message => {
         
         if(!reason) reason = "```diff\n- Por favor informe uma razão pela qual você está expulsando. \n```";
         await member.kick(reason)
-        .catch(error => message.reply(`Desculpe ${message.author}, o usuário não foi expulso pelo erro: ${error}`));
-        message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
-            let kickEmbed = new Discord.RichEmbed()
+    let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
     .setColor("#e56b00")
     .addField("Kicked User", `${member} with ID ${kUser.id}`)
