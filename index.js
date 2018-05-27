@@ -145,8 +145,8 @@ bot.on("message", async message => {
 
 });
 
-  const teste = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const Falar = teste.join(" ");
+  let teste = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  let Falar = teste.join(" ");
 
   if (cmd === prefix + 'falar') {
     message.delete().catch(O_o=>{}); 
