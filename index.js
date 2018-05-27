@@ -126,11 +126,11 @@ bot.on("message", async message => {
         async function purge() {
             message.delete();
             if (!message.member.roles.find("name", "Mito")) {
-                message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
+                message.channel.send(sender + ', \n```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
                 return;
             }
             if (isNaN(arg[0])) {
-                message.channel.send('```diff\n- Por favor utilize números como argumento. \n-> ' + prefix + 'apagar <argumento> \n```');
+                message.channel.send(sender + ', \n```diff\n- Por favor utilize números como argumento. \n-> ' + prefix + 'apagar <argumento> \n```');
                 return;
             }
             const fetched = await message.channel.fetchMessages({
@@ -145,7 +145,7 @@ bot.on("message", async message => {
 
   if (cmd === prefix + 'falar') {       
     if (!message.member.roles.find("name", "Mito")) {
-        message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
+        message.channel.send(sender + ', \n```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
         return;
     }
     message.delete().catch(O_o=>{}); 
