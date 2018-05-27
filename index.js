@@ -83,9 +83,9 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if( Palavras.some(word => message.content.includes(word)) ) {
+    if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
-        message.reply(sender + ' - Por favor não utilize palavras inapropriadas!');
+        message.reply(' - Por favor não utilize palavras inapropriadas!');
     }
 
     if (cmd === prefix + 'info') {
