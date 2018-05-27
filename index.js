@@ -2,9 +2,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
-const Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf"];
-const Divulgar = ["minimania", "www.minimania.net.br", "minimania.net.br", "discord.gg", "discord.me"];
-
 var Info = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Informações sobre o BOT    ◄ ")
@@ -83,6 +80,9 @@ bot.on("message", async message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
+    let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf"];
+    let Divulgar = ["minimania", "www.minimania.net.br", "minimania.net.br", "discord.gg", "discord.me"];
+    let Falar = args.join(" ");
     
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
@@ -142,9 +142,6 @@ bot.on("message", async message => {
         }
         purge();
     }
-    
-   
-  let Falar = args.join(" ");
 
   if (cmd === prefix + 'falar') {       
     if (!message.member.roles.find("name", "Mito")) {
@@ -154,8 +151,6 @@ bot.on("message", async message => {
     message.delete().catch(O_o=>{}); 
     message.channel.send(Falar);     
   }
-
-    
 
 });
 
