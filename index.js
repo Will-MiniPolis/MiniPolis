@@ -179,13 +179,19 @@ bot.on("message", async message => {
     
     
     
-    let Lobby = member.guild.channels.find('name', 'lobby');
-    let MensagemLobby = 'Seja bem vindo!'
+    const newUsers = [];
+    
+    bot.on("guildMemberAdd", (member) => {
+        const guild = member.guild;
+        if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+        newUsers[guild.id].set(member.id, member.user);
 
-    bot.on('guildMemberAdd', member => {
-        if (!Lobby) return;
-    	message.channel.send( "${member}" + MensagemLobby);
-    });
+    if (newUsers[guild.id].size > 10) {
+        const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+        guild.channels.get(guild.id).send("Seja bem vindo!\n" + userlist);
+        newUsers[guild.id].clear();
+  }
+});
     
     
     
