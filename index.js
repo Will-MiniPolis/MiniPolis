@@ -4,12 +4,12 @@ const prefix = '/';
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
-    bot.user.setActivity('Utilize: /comandos')
+    bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
     bot.user.setStatus('dnd');
 });
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando | Use the command:\n# /pt (Caso seu idioma seja Português)\n# /en (If your language is English)\n```'); 
+    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando: | Use the command:\n• /pt (Caso seu idioma seja Português)\n• /en (If your language is English)\n```'); 
 });
 
 var Comandos = new Discord.RichEmbed()
