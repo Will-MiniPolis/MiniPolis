@@ -142,9 +142,9 @@ bot.on("message", async message => {
         }
         purge();
     }
-
-});
-
+    
+    
+    
   let teste = message.content.slice(config.prefix.length).trim().split(/ +/g);
   let Falar = teste.join(" ");
 
@@ -153,5 +153,8 @@ bot.on("message", async message => {
     message.channel.send(Falar);
   }
 
+    
+
+});
 
 bot.login(process.env.TOKEN);
