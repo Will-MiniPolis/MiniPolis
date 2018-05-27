@@ -184,7 +184,7 @@ bot.on("message", async message => {
 
     bot.on('guildMemberAdd', member => {
         if (!Lobby) return;
-    	message.Lobby.send( "${member}" + MensagemLobby);
+    	message.channel.send( "${member}" + MensagemLobby);
     });
     
     
