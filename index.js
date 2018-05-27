@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
+const Palavras = ["lixo", "otário", "merda", "bosta"];
+
 var Info = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Informações sobre o BOT    ◄ ")
@@ -10,7 +12,7 @@ var Info = new Discord.RichEmbed()
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://facebook.com/Will.MiniPolis")
     .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
-    .addField(" • Atualização: 26/05/2018 ", " • Nome do BOT: MOD - [BR] ")
+    .addField(" • Atualização: 27/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
 var Jogar = new Discord.RichEmbed()
@@ -80,6 +82,11 @@ bot.on("message", async message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
+    
+    if( Palavras.some(word => message.content.includes(word)) ) {
+        message.delete();
+        message.reply(sender + ' - Por favor não utilize palavras inapropriadas!');
+    }
 
     if (cmd === prefix + 'info') {
         message.channel.send(Info);
@@ -125,7 +132,7 @@ bot.on("message", async message => {
             });
             console.log(sender + ' apagou [' + fetched.size + '] mensagens!');
             message.channel.bulkDelete(fetched)
-                .catch(error => message.channel.send(`[ERRO]: ${error}`));
+            .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
         purge();
     }
