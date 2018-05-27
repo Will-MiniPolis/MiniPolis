@@ -2,6 +2,9 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
+conts BR = member.guild.roles.find("name", "Português");
+conts EN = member.guild.roles.find("name", "Inglês");
+
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
     bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
@@ -108,6 +111,21 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
     let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
+    
+    
+
+    if (cmd === prefix + 'br') {
+        member.addRole(BR).catch(console.error);
+    }
+    if (cmd === prefix + 'en') {
+        member.addRole(EN).catch(console.error);
+    }
+    if (cmd === prefix + 'BR') {
+        member.addRole(BR).catch(console.error);
+    }
+    if (cmd === prefix + 'EN') {
+        member.addRole(EN).catch(console.error);
+    }
 
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
