@@ -88,6 +88,23 @@ bot.on("ready", async () => {
     bot.user.setActivity(`Utilize: /comandos`);
 });
 
+
+
+
+bot.on(`guildMemberAdd`, member => {
+    var dC= member.guild.channels.find("name", "lobby");
+    /* Using dC for short. */
+
+    if (dC) {
+        dC.send(`${member.username}, welcome to the server!");
+    } else {
+        member.guild.defaultChannel.send(`${member.username}, welcome to the server!");
+    }
+});
+        
+        
+        
+
 bot.on("message", async message => {
 
     if (message.author.bot) return;
@@ -176,21 +193,6 @@ bot.on("message", async message => {
         message.channel.send(Falar);
     }
     
-    
-    
-
-    bot.on(`guildMemberAdd`, member => {
-        var dC= member.guild.channels.find("name", "lobby");
-        if (dC) {
-        dC.send(`${member.username}, testando 1 2 3!");
-    } else {
-         member.guild.defaultChannel.send(`${member.username}, testando 1 2 3!");
-    }
-});
-    
-    
-    
-
 });
 
 bot.login(process.env.TOKEN);
