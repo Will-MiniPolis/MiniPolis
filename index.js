@@ -89,7 +89,7 @@ bot.on("ready", async () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando | Use the command:\n# /português (Caso seu idioma seja Português)\n# /inglês (If your language is English)\n```'); 
+    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando | Use the command:\n# /português (Caso seu idioma seja Português)\n# /english (If your language is English)\n```'); 
 });
         
 bot.on("message", async message => {
