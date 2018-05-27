@@ -100,8 +100,8 @@ bot.on("message", async message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf"];
-    let Divulgar = ["minimania", "www.minimania.net.br", "minimania.net.br", "discord.gg", "discord.me"];
+    let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
+    let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
 
     if (Palavras.some(word => message.content.includes(word))) {
@@ -175,6 +175,20 @@ bot.on("message", async message => {
         message.delete().catch(O_o => {});
         message.channel.send(Falar);
     }
+    
+    
+    
+    
+    let Lobby = member.guild.channels.find('name', 'lobby');
+    let MensagemLobby = 'Seja bem vindo!'
+
+    bot.on('guildMemberAdd', member => {
+        if (!Lobby) return;
+    	message.Lobby.send( "${member}" + MensagemLobby);
+    });
+    
+    
+    
 
 });
 
