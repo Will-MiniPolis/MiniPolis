@@ -146,9 +146,13 @@ bot.on("message", async message => {
    
   let Falar = args.join(" ");
 
-  if (cmd === prefix + 'falar') {
+  if (cmd === prefix + 'falar') {       
+    if (!message.member.roles.find("name", "Mito")) {
+        message.channel.send('```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
+        return;
+    }
     message.delete().catch(O_o=>{}); 
-    message.channel.send(Falar);
+    message.channel.send(Falar);     
   }
 
     
