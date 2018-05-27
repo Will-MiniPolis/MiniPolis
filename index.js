@@ -9,9 +9,9 @@ var Comandos = new Discord.RichEmbed()
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://minipolis.com.br/")
-    .addField(" • /info (Informações sobre o BOT) ", " • /jogar (Como jogar MiniPólis) ")
-    .addField(" • /ajudantes (Lista com os Ajudantes do MiniPólis) ", " • /equipe (Lista com a Equipe do MiniPólis) ")
-    .addField(" • /moderadores (Lista com os Moderadores do MiniPólis) ", " • /administradores (Lista com os Administradores do MiniPólis) ");
+    .addField(" •   /info (Informações sobre o BOT) ", " •   /jogar (Como jogar MiniPólis) ")
+    .addField(" •   /ajudantes (Lista com os Ajudantes do MiniPólis) ", " •   /equipe (Lista com a Equipe do MiniPólis) ")
+    .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " •   /administradores (Lista com os Administradores do MiniPólis) ");
 
 var MP = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -20,7 +20,7 @@ var MP = new Discord.RichEmbed()
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://minipolis.com.br/")
-    .addField(" • /apagar <argumento> (Apagar as mensagens do CHAT) ", " • /falar (Comandar as falas do BOT) ");
+    .addField(" •   /apagar <argumento> (Apagar as mensagens do CHAT) ", " •   /falar (Comandar as falas do BOT) ");
 
 var Info = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
