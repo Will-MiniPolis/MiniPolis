@@ -86,7 +86,7 @@ bot.on("message", async message => {
     
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
-        message.channel.send(sender + ' - Por favor não utilize palavras insultantes.');
+        message.channel.send('```diff\n-' + sender + ' por favor não utilize palavras insultantes. \n```');
     }
     
     if (Divulgar.some(word => message.content.includes(word))) {
