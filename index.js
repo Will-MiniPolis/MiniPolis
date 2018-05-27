@@ -8,10 +8,6 @@ bot.on("ready", async () => {
     bot.user.setStatus('dnd');
 });
 
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando: | Use the command:\n• /pt (Caso seu idioma seja Português)\n• /en (If your language is English)\n```'); 
-});
-
 var Comandos = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Comandos do BOT    ◄ ")
@@ -108,26 +104,7 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
     let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
-    
-    
-    if (cmd === prefix + 'pt') {
-        message.member.addRole('450404934450675722');
-        message.channel.send(sender + ', \n```fix\n• Agora você pertence ao membros de idioma Português. \n```');
-    }
-    if (cmd === prefix + 'PT') {
-        message.member.addRole('450404934450675722');
-        message.channel.send(sender + ', \n```fix\n• Agora você pertence ao membros de idioma Português. \n```');
-    }
-    if (cmd === prefix + 'en') {
-        message.member.addRole('450409846186049558');
-        message.channel.send(sender + ', \n```fix\n• You now belong to English language members. \n```');
-    }
-    if (cmd === prefix + 'EN') {
-        message.member.addRole('450409846186049558');
-        message.channel.send(sender + ', \n```fix\n• You now belong to English language members. \n```');
-    }
-    
-    
+
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
         message.channel.send(sender + ', \n```diff\n- Não é permitido a utilização de palavras insultantes. \n```');
