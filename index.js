@@ -4,7 +4,7 @@ const prefix = '/';
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
-    bot.user.setActivity('Utilize: /comandos');
+    bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
     bot.user.setStatus('dnd');
 });
 
@@ -108,6 +108,12 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
     let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
+    
+    
+    if (cmd === prefix + 'pt') {
+        message.member.addRole('&450404934450675722');
+    }
+    
     
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
