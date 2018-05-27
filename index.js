@@ -113,6 +113,19 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
     let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
+    let PT = member.guild.roles.find("name", "Português");
+    let EN = member.guild.roles.find("name", "Inglês");
+    
+    
+
+    if (cmd === prefix + 'pt') {
+        member.addRole(PT).catch(console.error);
+    }
+    if (cmd === prefix + 'en') {
+        member.addRole(EN).catch(console.error);
+    }
+    
+    
 
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
