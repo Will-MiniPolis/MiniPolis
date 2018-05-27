@@ -2,9 +2,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
-const BR = member.guild.roles.find("name", "Português");
-const EN = member.guild.roles.find("name", "Inglês");
-
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
     bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
@@ -13,6 +10,11 @@ bot.on("ready", async () => {
 
 bot.on('guildMemberAdd', member => {
     member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando: | Use the command:\n• /pt (Caso seu idioma seja Português)\n• /en (If your language is English)\n```'); 
+});
+
+bot.on("guildMemberAdd", function(member) {
+    let role = member.guild.roles.find("name", "Português");
+    member.addRole(role).catch(console.error);
 });
 
 var Comandos = new Discord.RichEmbed()
@@ -111,21 +113,6 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf", "viado", "gay", "puta", "rapariga", "vadia", "corno", "caralho", "buceta", "crl", "pau no cu", "pnc"];
     let Divulgar = ["minimania.net.br", "discord.gg", "discord.me", "minimaniajogo"];
     let Falar = args.join(" ");
-    
-    
-
-    if (cmd === prefix + 'br') {
-        member.addRole(BR).catch(console.error);
-    }
-    if (cmd === prefix + 'en') {
-        member.addRole(EN).catch(console.error);
-    }
-    if (cmd === prefix + 'BR') {
-        member.addRole(BR).catch(console.error);
-    }
-    if (cmd === prefix + 'EN') {
-        member.addRole(EN).catch(console.error);
-    }
 
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
