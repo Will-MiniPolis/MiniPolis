@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
-const Palavras = ["lixo", "otário", "merda", "bosta"];
+const Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa"];
 
 var Info = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -85,7 +85,7 @@ bot.on("message", async message => {
     
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
-        message.reply(' - Por favor não utilize palavras inapropriadas!');
+        message.reply(' por favor não utilize palavras inapropriadas!');
     }
 
     if (cmd === prefix + 'info') {
