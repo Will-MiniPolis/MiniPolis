@@ -179,9 +179,14 @@ bot.on("message", async message => {
     
     
 
-    bot.on('guildMemberAdd', member => {
-        member.guild.channels.get('450337831684931624').send('**' + member.user.username + '**, entrou no Discord do MiniPólis!'); 
-    });
+    bot.on(`guildMemberAdd`, member => {
+        var dC= member.guild.channels.find("name", "lobby");
+        if (dC) {
+        dC.send(`${member.username}, testando 1 2 3!");
+    } else {
+         member.guild.defaultChannel.send(`${member.username}, testando 1 2 3!");
+    }
+});
     
     
     
