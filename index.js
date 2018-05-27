@@ -2,6 +2,16 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
+bot.on("ready", async () => {
+    console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
+    bot.user.setActivity('Utilize: /comandos')
+    bot.user.setStatus('dnd');
+});
+
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando | Use the command:\n# /pt (Caso seu idioma seja Português)\n# /en (If your language is English)\n```'); 
+});
+
 var Comandos = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Comandos do BOT    ◄ ")
@@ -82,15 +92,6 @@ var Administradores = new Discord.RichEmbed()
     .setThumbnail("https://i.imgur.com/XpxUHn4.png")
     .setURL("https://minipolis.com.br/")
     .addField(" • Rky Smart ", "• Tiago Admin-MP ");
-
-bot.on("ready", async () => {
-    console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
-    bot.user.setActivity(`Utilize: /comandos`);
-});
-
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('450337831684931624').send(member.user + ',\n```md\n# Seja bem-vindo(a) ao Discord do MiniPólis!\n# Welcome to the MiniPólis Discord!\n``````fix\n- Utilize o comando | Use the command:\n# /pt (Caso seu idioma seja Português)\n# /en (If your language is English)\n```'); 
-});
         
 bot.on("message", async message => {
 
