@@ -94,9 +94,9 @@ bot.on("ready", async () => {
 bot.on('guildMemberAdd', member => {
     var dC= member.guild.channels.find("name", "lobby");
     if (dC) {
-        dC.send('${member.user}, sejá bem vindo!');
+        dC.send('${member.user.username}, sejá bem vindo!');
     } else {
-        member.guild.defaultChannel.send('${member.user}, sejá bem vindo!');
+        member.guild.defaultChannel.send('${member.user.username}, sejá bem vindo!');
     }
 });
         
