@@ -145,4 +145,13 @@ bot.on("message", async message => {
 
 });
 
+
+  const Falar = args.join(" ");
+
+  if (cmd === prefix + 'falar') {
+    message.delete().catch(O_o=>{}); 
+    message.channel.send(Falar);
+  }
+
+
 bot.login(process.env.TOKEN);
