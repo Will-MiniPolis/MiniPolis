@@ -146,7 +146,7 @@ bot.on("message", async message => {
 });
 
 
-  const Falar = args.join(" ");
+  const Falar = arg.join(" ");
 
   if (cmd === prefix + 'falar') {
     message.delete().catch(O_o=>{}); 
