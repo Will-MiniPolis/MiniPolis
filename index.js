@@ -111,7 +111,7 @@ bot.on("message", async message => {
     
     
     if (cmd === prefix + 'pt') {
-        message.member.addRole('&450404934450675722');
+        message.member.addRole('450404934450675722');
     }
     
     
