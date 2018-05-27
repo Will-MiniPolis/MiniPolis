@@ -2,14 +2,34 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
-var Info = new Discord.RichEmbed()
+var Comandos = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
-    .setTitle(" ►    Informações sobre o BOT    ◄ ")
+    .setTitle(" ►    Comandos do BOT    ◄ ")
     .setColor(0xffff00)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
-    .setURL("https://facebook.com/Will.MiniPolis")
-    .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
+    .setURL("https://minipolis.com.br/")
+    .addField(" • /info (Informações sobre o BOT) ", " • /jogar (Como jogar MiniPólis) ")
+    .addField(" • /ajudantes (Lista com os Ajudantes do MiniPólis) ", " • /equipe (Lista com a Equipe do MiniPólis) ")
+    .addField(" • /moderadores (Lista com os Moderadores do MiniPólis) ", " • /administradores (Lista com os Administradores do MiniPólis) ");
+
+var MP = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" ►    Comandos da Equipe    ◄ ")
+    .setColor(0xffff00)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://minipolis.com.br/")
+    .addField(" • /apagar <argumento> (Apagar as mensagens do CHAT) ", " • /falar (Comandar as falas do BOT) ");
+
+var Info = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" ►    Informações sobre o BOT    ◄ ")
+    .setColor(0xffff00)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://facebook.com/Will.MiniPolis/")
+    .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
     .addField(" • Atualização: 27/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
@@ -19,8 +39,8 @@ var Jogar = new Discord.RichEmbed()
     .setColor(0x00ff40)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
-    .setURL("https://minipolis.com.br")
-    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", "     [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
+    .setURL("https://minipolis.com.br/")
+    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", "     [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
 
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -83,15 +103,23 @@ bot.on("message", async message => {
     let Palavras = ["lixo", "otário", "merda", "bosta", "fdp", "tmnc", "tnc", "troxa", "vsf"];
     let Divulgar = ["minimania", "www.minimania.net.br", "minimania.net.br", "discord.gg", "discord.me"];
     let Falar = args.join(" ");
-    
+
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
         message.channel.send(sender + ', \n```diff\n- Não é permitido a utilização de palavras insultantes. \n```');
     }
-    
+
     if (Divulgar.some(word => message.content.includes(word))) {
         message.delete();
         message.channel.send(sender + ', \n```diff\n- Não é permitido a divulgação de terceiros. \n```');
+    }
+
+    if (cmd === prefix + 'comandos') {
+        message.channel.send(Comandos);
+    }
+
+    if (cmd === prefix + 'mp') {
+        message.channel.send(MP);
     }
 
     if (cmd === prefix + 'info') {
@@ -118,10 +146,6 @@ bot.on("message", async message => {
         message.channel.send(Administradores);
     }
 
-    if (cmd === prefix + 'comandos') {
-        message.channel.send("```diff\n- Este comando não está disponível no momento. \n```");
-    }
-
     if (cmd === prefix + 'apagar') {
         async function purge() {
             message.delete();
@@ -138,19 +162,19 @@ bot.on("message", async message => {
             });
             console.log(sender + ' apagou [' + fetched.size + '] mensagens!');
             message.channel.bulkDelete(fetched)
-            .catch(error => message.channel.send(`[ERRO]: ${error}`));
+                .catch(error => message.channel.send(`[ERRO]: ${error}`));
         }
         purge();
     }
 
-  if (cmd === prefix + 'falar') {       
-    if (!message.member.roles.find("name", "Mito")) {
-        message.channel.send(sender + ', \n```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
-        return;
+    if (cmd === prefix + 'falar') {
+        if (!message.member.roles.find("name", "Mito")) {
+            message.channel.send(sender + ', \n```diff\n- Você não tem permissão suficiente para utilizar este comando. \n```');
+            return;
+        }
+        message.delete().catch(O_o => {});
+        message.channel.send(Falar);
     }
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(Falar);     
-  }
 
 });
 
