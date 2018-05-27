@@ -112,19 +112,19 @@ bot.on("message", async message => {
     
     if (cmd === prefix + 'pt') {
         message.member.addRole('450404934450675722');
-        message.channel.send(sender + ', \n```md\n• Agora você pertence ao membros de idioma Português. \n```');
+        message.channel.send(sender + ', \n```fix\n• Agora você pertence ao membros de idioma Português. \n```');
     }
     if (cmd === prefix + 'PT') {
         message.member.addRole('450404934450675722');
-        message.channel.send(sender + ', \n```md\n• Agora você pertence ao membros de idioma Português. \n```');
+        message.channel.send(sender + ', \n```fix\n• Agora você pertence ao membros de idioma Português. \n```');
     }
     if (cmd === prefix + 'en') {
         message.member.addRole('450409846186049558');
-        message.channel.send(sender + ', \n```md\n• You now belong to English language members. \n```');
+        message.channel.send(sender + ', \n```fix\n• You now belong to English language members. \n```');
     }
     if (cmd === prefix + 'EN') {
         message.member.addRole('450409846186049558');
-        message.channel.send(sender + ', \n```md\n• You now belong to English language members. \n```');
+        message.channel.send(sender + ', \n```fix\n• You now belong to English language members. \n```');
     }
     
     
