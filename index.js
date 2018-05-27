@@ -86,12 +86,12 @@ bot.on("message", async message => {
     
     if (Palavras.some(word => message.content.includes(word))) {
         message.delete();
-        message.channel.send('```diff\n-' + sender + ' por favor não utilize palavras insultantes. \n```');
+        message.channel.send(sender + ', \n```diff\n- Não é permitido a utilização de palavras insultantes! \n```');
     }
     
     if (Divulgar.some(word => message.content.includes(word))) {
         message.delete();
-        message.reply('não é permitido a divulgação de terceiros.');
+        message.channel.send(sender + ', \n```diff\n- Não é permitido a divulgação de terceiros! \n```');
     }
 
     if (cmd === prefix + 'info') {
