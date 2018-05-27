@@ -91,14 +91,14 @@ bot.on("ready", async () => {
 
 
 
-bot.on(`guildMemberAdd`, member => {
+bot.on('guildMemberAdd', member => {
     var dC= member.guild.channels.find("name", "lobby");
     /* Using dC for short. */
 
     if (dC) {
-        dC.send(`${member.username}, welcome to the server!");
+        dC.send('${member.username}, welcome to the server!');
     } else {
-        member.guild.defaultChannel.send(`${member.username}, welcome to the server!");
+        member.guild.defaultChannel.send('${member.username}, welcome to the server!');
     }
 });
         
