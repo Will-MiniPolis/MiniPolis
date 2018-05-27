@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = '/';
 
-conts BR = member.guild.roles.find("name", "Português");
-conts EN = member.guild.roles.find("name", "Inglês");
+const BR = member.guild.roles.find("name", "Português");
+const EN = member.guild.roles.find("name", "Inglês");
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
