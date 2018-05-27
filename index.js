@@ -92,12 +92,7 @@ bot.on("ready", async () => {
 
 
 bot.on('guildMemberAdd', member => {
-    var dC= member.guild.channels.find("name", "lobby");
-    if (dC) {
-        dC.send('${member.user.username}, sejá bem vindo!');
-    } else {
-        member.guild.defaultChannel.send('${member.user.username}, sejá bem vindo!');
-    }
+    member.guild.channels.get('450337831684931624').send('**' + member.user.username + '**, entrou no MiniPólis!'); 
 });
         
         
