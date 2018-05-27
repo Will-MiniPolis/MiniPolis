@@ -91,7 +91,7 @@ bot.on("message", async message => {
     
     if (Divulgar.some(word => message.content.includes(word))) {
         message.delete();
-        message.reply('não é permitido divulgação de terceiros.');
+        message.reply('não é permitido a divulgação de terceiros.');
     }
 
     if (cmd === prefix + 'info') {
