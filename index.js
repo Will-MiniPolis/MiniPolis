@@ -19,6 +19,12 @@ var Comandos = new Discord.RichEmbed()
     .addField(" •   /ajudantes (Lista com os Ajudantes do MiniPólis) ", " •   /equipe (Lista com a Equipe do MiniPólis) ")
     .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " •   /administradores (Lista com os Administradores do MiniPólis) ");
 
+
+    .addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
+    .addField(" •   /jogar (Como jogar MiniPólis)) ", " •   /ajudantes (Lista com os Ajudantes do MiniPólis) ")
+    .addField(" •   /equipe (Lista com a Equipe do MiniPólis) ", " •   /moderadores (Lista com os Moderadores do MiniPólis) ");
+    .addField(" •   /administradores (Lista com os Administradores do MiniPólis) ", " \u200b ");
+
 var MP = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" ►    Comandos da Equipe    ◄ ")
@@ -39,6 +45,15 @@ var Info = new Discord.RichEmbed()
     .addField(" • Atualização: 27/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
+var Suporte = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" ►    Suporte do MiniPólis    ◄  ")
+    .setColor(0x00ff40)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://minipolis.com.br/")
+    .addField("   Para entrar em contato com o suporte, envie um email para:   ", " •   [suporte@minipolis.com.br](https://www.minipolis.com.br/)     ");
+
 var Jogar = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" :video_game:   Jogar MiniPólis   :video_game: ")
@@ -46,7 +61,7 @@ var Jogar = new Discord.RichEmbed()
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://minipolis.com.br/")
-    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", "     [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
+    .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", " •   [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
 
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -125,6 +140,10 @@ bot.on("message", async message => {
 
     if (cmd === prefix + 'info') {
         message.channel.send(Info);
+    }
+
+    if (cmd === prefix + 'suporte') {
+        message.channel.send(Suporte);
     }
 
     if (cmd === prefix + 'jogar') {
