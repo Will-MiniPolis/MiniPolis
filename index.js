@@ -14,13 +14,7 @@ var Comandos = new Discord.RichEmbed()
     .setColor(0xff3e43)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
-    .setURL("https://minipolis.com.br/")
-    .addField(" •   /info (Informações sobre o BOT) ", " •   /jogar (Como jogar MiniPólis) ")
-    .addField(" •   /ajudantes (Lista com os Ajudantes do MiniPólis) ", " •   /equipe (Lista com a Equipe do MiniPólis) ")
-    .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " •   /administradores (Lista com os Administradores do MiniPólis) ");
-
-
-    .addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
+    .setURL("https://minipolis.com.br/").addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
     .addField(" •   /jogar (Como jogar MiniPólis)) ", " •   /ajudantes (Lista com os Ajudantes do MiniPólis) ")
     .addField(" •   /equipe (Lista com a Equipe do MiniPólis) ", " •   /moderadores (Lista com os Moderadores do MiniPólis) ");
     .addField(" •   /administradores (Lista com os Administradores do MiniPólis) ", " \u200b ");
