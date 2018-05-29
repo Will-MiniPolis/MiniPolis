@@ -57,6 +57,15 @@ var Jogar = new Discord.RichEmbed()
     .setURL("https://minipolis.com.br/")
     .addField("   Para jogar a versão ALPHA do MiniPólis acesse:   ", " •   [alpha.minipolis.com.br](https://alpha.minipolis.com.br/)     ");
 
+var Facebook = new Discord.RichEmbed()
+    .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
+    .setTitle(" ►    Página no Facebook do MiniPólis    ◄  ")
+    .setColor(0x00ff40)
+    .setDescription(" \u200b ")
+    .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
+    .setURL("https://minipolis.com.br/")
+    .addField("   Curta nossa página no Facebook para acompanhar todas as novidades e notícias:   ", " •   [www.facebook.com/minipolisjogo](https://www.facebook.com/minipolisjogo/)     ");
+
 var Ajudantes = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
     .setTitle(" (+)   Ajudantes do MiniPólis   (+) ")
@@ -142,6 +151,10 @@ bot.on("message", async message => {
 
     if (cmd === prefix + 'jogar') {
         message.channel.send(Jogar);
+    }
+
+    if (cmd === prefix + 'facebook') {
+        message.channel.send(Facebook);
     }
 
     if (cmd === prefix + 'ajudantes') {
