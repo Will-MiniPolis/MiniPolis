@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const prefix = '/';
 
 bot.on("ready", async () => {
-    console.log(`-----||-----||-----||----- \n BOT ATIVADO COM SUCESSO! \n -----||-----||-----||-----`);
+    console.log(`-----||-----||-----||----- \n  BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
     bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
     bot.user.setStatus('dnd');
 });
@@ -18,7 +18,7 @@ var Comandos = new Discord.RichEmbed()
     .addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
     .addField(" •   /jogar (Como jogar MiniPólis)) ", " •   /facebook (Página no Facebook do MiniPólis) ")
     .addField(" •   /ajudantes (Lista com os Ajudantes do MiniPólis) ", " •   /equipe (Lista com a Equipe do MiniPólis) ")
-    .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " /administradores (Lista com os Administradores do MiniPólis) ");
+    .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " •   /administradores (Lista com os Administradores do MiniPólis) ");
 
 var MP = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
