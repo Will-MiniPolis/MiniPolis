@@ -14,10 +14,11 @@ var Comandos = new Discord.RichEmbed()
     .setColor(0xff3e43)
     .setDescription(" \u200b ")
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
-    .setURL("https://minipolis.com.br/").addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
-    .addField(" •   /jogar (Como jogar MiniPólis)) ", " •   /ajudantes (Lista com os Ajudantes do MiniPólis) ")
-    .addField(" •   /equipe (Lista com a Equipe do MiniPólis) ", " •   /moderadores (Lista com os Moderadores do MiniPólis) ")
-    .addField(" •   /administradores (Lista com os Administradores do MiniPólis) ", " \u200b ");
+    .setURL("https://minipolis.com.br/")
+    .addField(" •   /info (Informações sobre o BOT) ", " •   /suporte (Suporte do MiniPólis) ")
+    .addField(" •   /jogar (Como jogar MiniPólis)) ", " •   /facebook (Página no Facebook do MiniPólis) ")
+    .addField(" •   /ajudantes (Lista com os Ajudantes do MiniPólis) ", " •   /equipe (Lista com a Equipe do MiniPólis) ")
+    .addField(" •   /moderadores (Lista com os Moderadores do MiniPólis) ", " /administradores (Lista com os Administradores do MiniPólis) ");
 
 var MP = new Discord.RichEmbed()
     .setAuthor(" MOD - [BR] ", "https://i.imgur.com/DjkjbxW.png")
@@ -36,7 +37,7 @@ var Info = new Discord.RichEmbed()
     .setFooter(" © MiniPólis - Todos os direitos reservados. ", "https://i.imgur.com/flUGdY9.png")
     .setURL("https://facebook.com/Will.MiniPolis/")
     .addField(" • Desenvolvedor: Will Ajudante-MP ", " • Versão: 1.0.0 ")
-    .addField(" • Atualização: 27/05/2018 ", " • Nome do BOT: MOD - [BR] ")
+    .addField(" • Atualização: 29/05/2018 ", " • Nome do BOT: MOD - [BR] ")
     .addField(" • Idioma: Português (Brasil) ", " • Proprietário: [MiniPólis](https://www.minipolis.com.br/) ");
 
 var Suporte = new Discord.RichEmbed()
