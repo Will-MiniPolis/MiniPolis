@@ -4,7 +4,7 @@ const prefix = '/';
 
 bot.on("ready", async () => {
     console.log(`-----||-----||-----||----- \n  BOT ATIVADO COM SUCESSO! \n-----||-----||-----||-----`);
-    bot.user.setActivity('Utilize: /comandos', 'https://www.twitch.tv/');
+    bot.user.setActivity('Utilize: /comandos');
     bot.user.setStatus('dnd');
 });
 
